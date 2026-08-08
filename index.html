@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Niss Bloom | Custom Handmade Bouquets</title>
+<meta name="description" content="Niss Bloom — custom handmade bouquets. Order your bouquet and pay your 50% deposit through Cash App.">
+<style>
+:root{--pink:#f7c7d9;--hot:#d94f87;--dark:#321b28;--cream:#fff9fb;--white:#fff}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--dark)}
+nav{position:sticky;top:0;z-index:5;background:#fff9fbeF;backdrop-filter:blur(10px);display:flex;justify-content:space-between;align-items:center;padding:16px 7%;border-bottom:1px solid #f3dce6}
+.logo{font-weight:800;font-size:1.35rem;color:var(--hot)}nav a{color:var(--dark);text-decoration:none;margin-left:18px;font-weight:700}
+.hero{max-width:1150px;margin:auto;padding:55px 7%;display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center}
+h1{font-size:clamp(2.7rem,7vw,5.5rem);line-height:.95;margin:8px 0 18px}.eyebrow{color:var(--hot);font-weight:800;letter-spacing:2px}.hero p{font-size:1.15rem;line-height:1.6}
+.btn{display:inline-block;border:0;border-radius:999px;padding:14px 22px;background:var(--hot);color:#fff;text-decoration:none;font-weight:800;cursor:pointer}.btn.alt{background:#fff;color:var(--hot);border:2px solid var(--hot);margin-left:8px}
+.hero img{width:100%;max-height:570px;object-fit:cover;border-radius:28px;box-shadow:0 20px 60px #b77b9450}
+section{padding:70px 7%;max-width:1150px;margin:auto}h2{text-align:center;font-size:2.2rem;margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px}.card{background:#fff;border:1px solid #f1dce5;border-radius:22px;padding:22px;box-shadow:0 8px 25px #8d526010}.card h3{margin-top:0}.price{font-size:1.5rem;font-weight:900;color:var(--hot)}
+.order{background:#fff;border-radius:28px;padding:28px;box-shadow:0 10px 35px #8d526015}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}label{font-weight:700;font-size:.92rem}input,select,textarea{width:100%;padding:13px;margin-top:7px;border:1px solid #e5ccd7;border-radius:12px;background:#fff;font:inherit}textarea{min-height:90px}.full{grid-column:1/-1}
+.total{background:#fff2f7;border-radius:18px;padding:18px;margin:18px 0;font-size:1.05rem}.total strong{font-size:1.5rem;color:var(--hot)}
+.notice{background:#fff6d9;border-left:5px solid #e2ad21;padding:14px;border-radius:10px;line-height:1.5}
+.gallery img{width:100%;height:280px;object-fit:cover;border-radius:20px}.center{text-align:center}
+footer{background:#321b28;color:white;padding:35px 7%;text-align:center}footer a{color:#fff}
+@media(max-width:750px){.hero{grid-template-columns:1fr;padding-top:30px}.formgrid{grid-template-columns:1fr}.full{grid-column:auto}nav{align-items:flex-start}nav div:last-child{display:none}.btn.alt{margin-left:0;margin-top:8px}}
+</style>
+</head>
+<body>
+<nav><div class="logo">🌸 Niss Bloom</div><div><a href="#order">Order</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a><a href="https://www.instagram.com/niss.bloom_/" target="_blank" rel="noopener">Instagram</a></div></nav>
+
+<header class="hero">
+<div><div class="eyebrow">CUSTOM HANDMADE BOUQUETS</div><h1>Made with love. 💕</h1>
+<p>Beautiful handmade bouquets customized just for you — from the roses and colors to the ribbon and special add-ons.</p>
+<a class="btn" href="#order">Make an Order</a><a class="btn alt" href="#gallery">See My Work</a></div>
+<img src="assets/bouquet.svg" alt="Niss Bloom handmade bouquet">
+</header>
+
+<section><h2>Choose Your Bouquet</h2><div class="grid" id="sizes"></div></section>
+
+<section id="gallery"><h2>My Work 🌷</h2><div class="gallery"><img src="assets/bouquet.svg" alt="Pink satin rose bouquet"></div><p class="center">Happy Birthday — Pink Satin Roses 💕</p></section>
+
+<section id="order"><h2>Make Your Order</h2>
+<div class="order">
+<div class="notice"><strong>50% deposit required.</strong> Your bouquet will be started after the deposit is sent and your order is confirmed.</div>
+<form id="orderForm">
+<div class="formgrid">
+<div><label>Name<input id="name" required></label></div>
+<div><label>Phone number<input id="phone" type="tel" required></label></div>
+<div><label>Bouquet size<select id="size" required></select></label></div>
+<div><label>Rose color<input id="rose" placeholder="Pink, white, red..." required></label></div>
+<div><label>Ribbon color<input id="ribbon" placeholder="Pink, white, black..." required></label></div>
+<div><label>Wrap color<input id="wrap" placeholder="Pink, white..." required></label></div>
+<div><label>Add-on<select id="addon"><option value="0">None</option><option value="3">Hello Kitty — $3</option><option value="3">Stitch — $3</option><option value="3">Snoopy — $3</option><option value="2">Personalized ribbon text — $2</option></select></label></div>
+<div id="ribbonTextWrap" style="display:none"><label>Ribbon text<input id="ribbonText" placeholder="What should it say?"></label></div>
+<div><label>Fulfillment<select id="delivery"><option value="0">Pickup — FREE</option><option value="5">Delivery 0–5 miles — $5</option><option value="10">Delivery 6–10 miles — $10</option><option value="15">Delivery 11–15 miles — $15</option><option value="quote">15+ miles — Contact for price</option></select></label></div>
+<div id="addressWrap" style="display:none"><label>Delivery address<input id="address"></label></div>
+<div><label>Date needed<input id="date" type="date"></label></div>
+<div class="full"><label>Special requests<textarea id="special" placeholder="Tell me anything you'd like customized..."></textarea></label></div>
+</div>
+<div class="total">Bouquet total: <strong id="total">$25.00</strong><br>50% deposit: <strong id="deposit">$12.50</strong></div>
+<button class="btn" type="submit">Continue to Cash App 💵</button>
+</form>
+</div></section>
+
+<section id="contact"><h2>Contact Niss Bloom</h2><p class="center">Questions? Text <a href="sms:4633363283">463-336-3283</a></p><p class="center">Cash App: <strong>$LoveniseJp</strong></p><p class="center"><a class="btn alt" href="https://www.instagram.com/niss.bloom_/" target="_blank" rel="noopener">Follow @niss.bloom_ on Instagram 📸</a></p></section>
+
+<footer>🌸 Niss Bloom • Custom Handmade Bouquets<br><small>Thank you for supporting my small business 💕</small></footer>
+
+<script>
+const sizes=[["Mini",7,25],["Small",12,25],["Medium",18,30],["Large",24,35],["XL",30,40]];
+const sizeSel=document.querySelector("#size"), sizesBox=document.querySelector("#sizes");
+sizes.forEach(([name,roses,price])=>{
+ let c=document.createElement("div");c.className="card";c.innerHTML=`<h3>${name}</h3><p>${roses} roses</p><div class="price">$${price}</div>`;
+ sizesBox.appendChild(c);let o=document.createElement("option");o.value=price;o.textContent=`${name} — ${roses} roses — $${price}`;sizeSel.appendChild(o)
+});
+const addon=document.querySelector("#addon"), delivery=document.querySelector("#delivery");
+function update(){
+ let base=+sizeSel.value, add=+addon.value, fee=delivery.value==="quote"?0:+delivery.value,total=base+add+fee;
+ document.querySelector("#total").textContent="$"+total.toFixed(2);
+ document.querySelector("#deposit").textContent="$"+(total/2).toFixed(2);
+ document.querySelector("#ribbonTextWrap").style.display=addon.value==="2"?"block":"none";
+ document.querySelector("#addressWrap").style.display=delivery.value==="0"?"none":"block";
+}
+[sizeSel,addon,delivery].forEach(x=>x.addEventListener("change",update));update();
+
+document.querySelector("#orderForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ let total=parseFloat(document.querySelector("#total").textContent.replace("$","")), dep=total/2;
+ const order={name:name.value,phone:phone.value,size:size.options[size.selectedIndex].text,rose:rose.value,ribbon:ribbon.value,wrap:wrap.value,addon:addon.options[addon.selectedIndex].text,delivery:delivery.options[delivery.selectedIndex].text,date:date.value,address:address.value,special:special.value,total,deposit:dep,created:new Date().toLocaleString()};
+ localStorage.setItem("niss_bloom_last_order",JSON.stringify(order));
+ const note=`Hi Niss Bloom! I just placed an order. Name: ${order.name}. Bouquet: ${order.size}. Total: $${total.toFixed(2)}. 50% deposit: $${dep.toFixed(2)}.`;
+ const cashapp=`https://cash.app/$LoveniseJp/${dep.toFixed(2)}`;
+ document.body.innerHTML=`<main style="max-width:700px;margin:60px auto;padding:25px;text-align:center;font-family:Arial;color:#321b28"><div style="font-size:3rem">🌸</div><h1>Order Ready!</h1><p>Your 50% deposit is <strong>$${dep.toFixed(2)}</strong>.</p><p>Send the deposit to <strong>$LoveniseJp</strong> on Cash App.</p><a class="btn" href="${cashapp}" style="display:inline-block;background:#d94f87;color:white;padding:14px 22px;border-radius:999px;text-decoration:none;font-weight:bold">Open Cash App</a><p style="margin-top:25px">After paying, text <a href="sms:4633363283?body=${encodeURIComponent(note)}">463-336-3283</a> with your payment confirmation.</p><p><a href="${location.pathname}">← Back to Niss Bloom</a></p></main>`;
+});
+</script>
+</body>
+</html>

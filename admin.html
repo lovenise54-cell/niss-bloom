@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Niss Bloom | Admin</title>
+<style>
+body{margin:0;background:#fff9fb;color:#321b28;font-family:Arial;padding:30px}
+main{max-width:850px;margin:auto}.box{background:white;border:1px solid #efd8e3;border-radius:22px;padding:24px;margin:18px 0;box-shadow:0 8px 25px #8d526010}
+input,button{padding:12px;border-radius:10px;border:1px solid #e2cbd6;font:inherit}button{background:#d94f87;color:white;border:0;font-weight:bold;cursor:pointer}.danger{background:#7d274d}.muted{color:#765866}.order{border-top:1px solid #ead6df;padding:16px 0}
+</style>
+</head>
+<body>
+<main>
+<h1>🌸 Niss Bloom Admin</h1>
+<div id="login" class="box">
+<h2>Owner Login</h2>
+<p class="muted">This is a simple local admin page for the free static version.</p>
+<input id="pw" type="password" placeholder="Admin password">
+<button onclick="login()">Log in</button>
+<p id="err"></p>
+</div>
+<div id="panel" style="display:none">
+<div class="box">
+<h2>Business Info</h2>
+<p><strong>Instagram:</strong> @niss.bloom_</p>
+<p><strong>Cash App:</strong> $LoveniseJp</p>
+<p><strong>Phone:</strong> 463-336-3283</p>
+</div>
+<div class="box">
+<h2>Saved Order Preview</h2>
+<p class="muted">The free version saves the last order only on the customer's device. It cannot send orders to this admin page without a real backend/database.</p>
+<div id="orders"></div>
+</div>
+<div class="box">
+<h2>Admin Tools</h2>
+<button class="danger" onclick="clearSaved()">Clear local test order</button>
+<button onclick="logout()">Log out</button>
+</div>
+</div>
+</main>
+<script>
+/*
+  IMPORTANT: This password is only a convenience lock for the static demo.
+  It is NOT secure authentication because GitHub Pages is public.
+  For real private admin access and shared orders, use a backend/database.
+*/
+const ADMIN_PASSWORD="NissBloomAdmin";
+function login(){
+  if(document.getElementById("pw").value===ADMIN_PASSWORD){
+    sessionStorage.setItem("nb_admin","1"); show();
+  } else document.getElementById("err").textContent="Wrong password.";
+}
+function show(){
+  document.getElementById("login").style.display="none";
+  document.getElementById("panel").style.display="block";
+  const o=JSON.parse(localStorage.getItem("niss_bloom_last_order")||"null");
+  document.getElementById("orders").innerHTML=o?`<div class="order"><strong>${o.name}</strong><br>${o.size}<br>Total: $${Number(o.total).toFixed(2)}<br>Deposit: $${Number(o.deposit).toFixed(2)}<br>Phone: ${o.phone}<br>Date needed: ${o.date||"Not specified"}<br>Created: ${o.created}</div>`:"No local test order found.";
+}
+function logout(){sessionStorage.removeItem("nb_admin");location.reload()}
+function clearSaved(){localStorage.removeItem("niss_bloom_last_order");show()}
+if(sessionStorage.getItem("nb_admin"))show();
+</script>
+</body>
+</html>
