@@ -4,7 +4,7 @@ NISS BLOOM — FREE PUBLISH VERSION
 2. Upload index.html and the assets folder.
 3. In GitHub: Settings -> Pages -> Deploy from a branch -> main -> / (root) -> Save.
 4. GitHub will give you a free website address.
-5. Replace assets/bouquet.svg with your real bouquet photo (name it bouquet.jpg) and change the two image references in index.html to assets/bouquet.jpg if desired.
+5. Replace assets/bouquet.svg with your real bouquet photo (https://i.pinimg.com/1200x/48/3d/43/483d43cb177e5d07d539ee2100ef7440.jpg)and change the two image references in index.html to assets/bouquet.jpg if desired.
 
 PAYMENT
 The site uses Cash App: $LoveniseJp.
