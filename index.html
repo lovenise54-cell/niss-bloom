@@ -1,96 +1,1261 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Niss Bloom | Custom Handmade Bouquets</title>
-<meta name="description" content="Niss Bloom — custom handmade bouquets. Order your bouquet and pay your 50% deposit through Cash App.">
-<style>
-:root{--pink:#f7c7d9;--hot:#d94f87;--dark:#321b28;--cream:#fff9fb;--white:#fff}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--dark)}
-nav{position:sticky;top:0;z-index:5;background:#fff9fbeF;backdrop-filter:blur(10px);display:flex;justify-content:space-between;align-items:center;padding:16px 7%;border-bottom:1px solid #f3dce6}
-.logo{font-weight:800;font-size:1.35rem;color:var(--hot)}nav a{color:var(--dark);text-decoration:none;margin-left:18px;font-weight:700}
-.hero{max-width:1150px;margin:auto;padding:55px 7%;display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center}
-h1{font-size:clamp(2.7rem,7vw,5.5rem);line-height:.95;margin:8px 0 18px}.eyebrow{color:var(--hot);font-weight:800;letter-spacing:2px}.hero p{font-size:1.15rem;line-height:1.6}
-.btn{display:inline-block;border:0;border-radius:999px;padding:14px 22px;background:var(--hot);color:#fff;text-decoration:none;font-weight:800;cursor:pointer}.btn.alt{background:#fff;color:var(--hot);border:2px solid var(--hot);margin-left:8px}
-.hero img{width:100%;max-height:570px;object-fit:cover;border-radius:28px;box-shadow:0 20px 60px #b77b9450}
-section{padding:70px 7%;max-width:1150px;margin:auto}h2{text-align:center;font-size:2.2rem;margin-top:0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px}.card{background:#fff;border:1px solid #f1dce5;border-radius:22px;padding:22px;box-shadow:0 8px 25px #8d526010}.card h3{margin-top:0}.price{font-size:1.5rem;font-weight:900;color:var(--hot)}
-.order{background:#fff;border-radius:28px;padding:28px;box-shadow:0 10px 35px #8d526015}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}label{font-weight:700;font-size:.92rem}input,select,textarea{width:100%;padding:13px;margin-top:7px;border:1px solid #e5ccd7;border-radius:12px;background:#fff;font:inherit}textarea{min-height:90px}.full{grid-column:1/-1}
-.total{background:#fff2f7;border-radius:18px;padding:18px;margin:18px 0;font-size:1.05rem}.total strong{font-size:1.5rem;color:var(--hot)}
-.notice{background:#fff6d9;border-left:5px solid #e2ad21;padding:14px;border-radius:10px;line-height:1.5}
-.gallery img{width:100%;height:280px;object-fit:cover;border-radius:20px}.center{text-align:center}
-footer{background:#321b28;color:white;padding:35px 7%;text-align:center}footer a{color:#fff}
-@media(max-width:750px){.hero{grid-template-columns:1fr;padding-top:30px}.formgrid{grid-template-columns:1fr}.full{grid-column:auto}nav{align-items:flex-start}nav div:last-child{display:none}.btn.alt{margin-left:0;margin-top:8px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Niss Bloom | Custom Handmade Bouquets</title>
+
+  <meta
+    name="description"
+    content="Niss Bloom — custom handmade bouquets made with love in Indianapolis."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff7fb;
+      color: #3d2430;
+      line-height: 1.6;
+    }
+
+    :root {
+      --pink: #ff72a8;
+      --dark-pink: #e83f7d;
+      --light-pink: #ffe3ef;
+      --cream: #fff9fc;
+      --dark: #3d2430;
+      --white: #ffffff;
+      --border: #f5bfd5;
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 247, 251, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--dark-pink);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: var(--dark-pink);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 20px;
+      background:
+        linear-gradient(rgba(255, 238, 247, .80), rgba(255, 247, 251, .93)),
+        url("pink-bouquet.jpg") center/cover;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      animation: fadeUp 1s ease;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 9vw, 90px);
+      color: var(--dark-pink);
+      line-height: 1;
+      margin-bottom: 18px;
+      font-family: Georgia, serif;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      padding: 13px 24px;
+      border-radius: 30px;
+      font-weight: 800;
+      transition: .25s;
+      font-size: 15px;
+    }
+
+    .btn-primary {
+      background: var(--dark-pink);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(232,63,125,.25);
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--dark-pink);
+      border: 2px solid var(--pink);
+    }
+
+    .btn-light:hover {
+      background: var(--light-pink);
+    }
+
+    /* GENERAL */
+    section {
+      padding: 80px 6%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      color: var(--dark-pink);
+      font-family: Georgia, serif;
+    }
+
+    .section-title p {
+      margin-top: 8px;
+      color: #765562;
+    }
+
+    /* ABOUT */
+    .about {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .gallery-card {
+      background: white;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(90, 25, 50, .09);
+      transition: .3s;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-card h3 {
+      padding: 16px 16px 18px;
+      text-align: center;
+      color: var(--dark-pink);
+    }
+
+    /* PRICES */
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .price-card {
+      background: white;
+      padding: 25px 15px;
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      transition: .25s;
+    }
+
+    .price-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--pink);
+    }
+
+    .price-card h3 {
+      color: var(--dark-pink);
+      font-size: 22px;
+    }
+
+    .price {
+      font-size: 28px;
+      font-weight: 900;
+      margin: 8px 0;
+    }
+
+    .rose-count {
+      color: #80606c;
+    }
+
+    /* EXTRAS */
+    .extras-box {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 25px;
+      border: 1px solid var(--border);
+    }
+
+    .extras-box ul {
+      list-style: none;
+    }
+
+    .extras-box li {
+      padding: 10px 0;
+      border-bottom: 1px solid #f4dce6;
+    }
+
+    .extras-box li:last-child {
+      border-bottom: none;
+    }
+
+    /* ORDER */
+    .order-section {
+      background: var(--light-pink);
+    }
+
+    .order-container {
+      max-width: 850px;
+      margin: auto;
+      background: white;
+      padding: 35px;
+      border-radius: 28px;
+      box-shadow: 0 12px 35px rgba(90, 25, 50, .08);
+    }
+
+    form {
+      display: grid;
+      gap: 18px;
+    }
+
+    label {
+      font-weight: 700;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid #e3bfd0;
+      border-radius: 12px;
+      padding: 13px;
+      font-size: 15px;
+      background: #fffafd;
+      color: var(--dark);
+      outline: none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--pink);
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .two-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .checkbox-group {
+      display: grid;
+      gap: 9px;
+    }
+
+    .check {
+      display: flex;
+      gap: 9px;
+      align-items: center;
+      font-weight: normal;
+    }
+
+    .check input {
+      width: auto;
+    }
+
+    .deposit-box {
+      background: #fff0f6;
+      padding: 18px;
+      border-radius: 15px;
+      border: 1px solid var(--border);
+    }
+
+    .total-box {
+      background: var(--dark);
+      color: white;
+      padding: 20px;
+      border-radius: 18px;
+      text-align: center;
+    }
+
+    .total-box h3 {
+      color: white;
+    }
+
+    #total {
+      font-size: 35px;
+      font-weight: 900;
+      color: #ff9fc4;
+    }
+
+    /* RECEIPT */
+    #receipt {
+      display: none;
+      max-width: 850px;
+      margin: 35px auto 0;
+      background: white;
+      border: 2px dashed var(--pink);
+      border-radius: 20px;
+      padding: 28px;
+    }
+
+    .receipt-header {
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+    }
+
+    .receipt-header h2 {
+      color: var(--dark-pink);
+      font-family: Georgia, serif;
+    }
+
+    .receipt-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 7px 0;
+      border-bottom: 1px solid #f5e5eb;
+    }
+
+    .receipt-row strong {
+      color: var(--dark-pink);
+    }
+
+    .receipt-total {
+      margin-top: 15px;
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .receipt-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    /* SOCIALS */
+    .socials {
+      text-align: center;
+    }
+
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    footer strong {
+      color: #ff9fc4;
+    }
+
+    footer a {
+      color: #ff9fc4;
+      text-decoration: none;
+    }
+
+    /* ANIMATION */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* MOBILE */
+    @media (max-width: 650px) {
+      .nav-links {
+        display: none;
+      }
+
+      section {
+        padding: 60px 5%;
+      }
+
+      .two-columns {
+        grid-template-columns: 1fr;
+      }
+
+      .order-container {
+        padding: 22px;
+      }
+
+      .hero {
+        min-height: 80vh;
+      }
+
+      .gallery-card img {
+        height: 320px;
+      }
+
+      .receipt-row {
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<nav><div class="logo">🌸 Niss Bloom</div><div><a href="#order">Order</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a><a href="https://www.instagram.com/niss.bloom_/" target="_blank" rel="noopener">Instagram</a></div></nav>
 
-<header class="hero">
-<div><div class="eyebrow">CUSTOM HANDMADE BOUQUETS</div><h1>Made with love. 💕</h1>
-<p>Beautiful handmade bouquets customized just for you — from the roses and colors to the ribbon and special add-ons.</p>
-<a class="btn" href="#order">Make an Order</a><a class="btn alt" href="#gallery">See My Work</a></div>
-<img src="https://i.pinimg.com/1200x/48/3d/43/483d43cb177e5d07d539ee2100ef7440.jpg" alt="Niss Bloom handmade bouquet">
-</header>
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">🌸 Niss Bloom</div>
 
-<section><h2>Choose Your Bouquet</h2><div class="grid" id="sizes"></div></section>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#prices">Prices</a></li>
+      <li><a href="#order">Order</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-<section id="gallery"><h2>My Work 🌷</h2><div class="gallery"><img src="https://i.pinimg.com/1200x/48/3d/43/483d43cb177e5d07d539ee2100ef7440.jpg" alt="https://i.pinimg.com/1200x/48/3d/43/483d43cb177e5d07d539ee2100ef7440.jpg"></div><p class="center">Happy Birthday — Pink Satin Roses 💕</p></section>
 
-<section id="order"><h2>Make Your Order</h2>
-<div class="order">
-<div class="notice"><strong>50% deposit required.</strong> Your bouquet will be started after the deposit is sent and your order is confirmed.</div>
-<form id="orderForm">
-<div class="formgrid">
-<div><label>Name<input id="name" required></label></div>
-<div><label>Phone number<input id="phone" type="tel" required></label></div>
-<div><label>Bouquet size<select id="size" required></select></label></div>
-<div><label>Rose color<input id="rose" placeholder="Pink, white, red..." required></label></div>
-<div><label>Ribbon color<input id="ribbon" placeholder="Pink, white, black..." required></label></div>
-<div><label>Wrap color<input id="wrap" placeholder="Pink, white..." required></label></div>
-<div><label>Add-on<select id="addon"><option value="0">None</option><option value="3">Hello Kitty — $3</option><option value="3">Stitch — $3</option><option value="3">Snoopy — $3</option><option value="2">Personalized ribbon text — $2</option></select></label></div>
-<div id="ribbonTextWrap" style="display:none"><label>Ribbon text<input id="ribbonText" placeholder="What should it say?"></label></div>
-<div><label>Fulfillment<select id="delivery"><option value="0">Pickup — FREE</option><option value="5">Delivery 0–5 miles — $5</option><option value="10">Delivery 6–10 miles — $10</option><option value="15">Delivery 11–15 miles — $15</option><option value="quote">15+ miles — Contact for price</option></select></label></div>
-<div id="addressWrap" style="display:none"><label>Delivery address<input id="address"></label></div>
-<div><label>Date needed<input id="date" type="date"></label></div>
-<div class="full"><label>Special requests<textarea id="special" placeholder="Tell me anything you'd like customized..."></textarea></label></div>
-</div>
-<div class="total">Bouquet total: <strong id="total">$25.00</strong><br>50% deposit: <strong id="deposit">$12.50</strong></div>
-<button class="btn" type="submit">Continue to Cash App 💵</button>
-</form>
-</div></section>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Niss Bloom 🌸</h1>
 
-<section id="contact"><h2>Contact Niss Bloom</h2><p class="center">Questions? Text <a href="sms:4633363283">463-336-3283</a></p><p class="center">Cash App: <strong>$LoveniseJp</strong></p><p class="center"><a class="btn alt" href="https://www.instagram.com/niss.bloom_/" target="_blank" rel="noopener">Follow @niss.bloom_ on Instagram 📸</a></p></section>
+      <p>
+        Custom Handmade Bouquets<br>
+        Made with love in Indianapolis 💕
+      </p>
 
-<footer>🌸 Niss Bloom • Custom Handmade Bouquets<br><small>Thank you for supporting my small business 💕</small></footer>
+      <div class="buttons">
+        <a href="#order" class="btn btn-primary">Order Your Bouquet 💐</a>
+        <a href="#gallery" class="btn btn-light">View Gallery</a>
+      </div>
+    </div>
+  </section>
 
-<script>
-const sizes=[["Mini",7,25],["Small",12,25],["Medium",18,30],["Large",24,35],["XL",30,40]];
-const sizeSel=document.querySelector("#size"), sizesBox=document.querySelector("#sizes");
-sizes.forEach(([name,roses,price])=>{
- let c=document.createElement("div");c.className="card";c.innerHTML=`<h3>${name}</h3><p>${roses} roses</p><div class="price">$${price}</div>`;
- sizesBox.appendChild(c);let o=document.createElement("option");o.value=price;o.textContent=`${name} — ${roses} roses — $${price}`;sizeSel.appendChild(o)
-});
-const addon=document.querySelector("#addon"), delivery=document.querySelector("#delivery");
-function update(){
- let base=+sizeSel.value, add=+addon.value, fee=delivery.value==="quote"?0:+delivery.value,total=base+add+fee;
- document.querySelector("#total").textContent="$"+total.toFixed(2);
- document.querySelector("#deposit").textContent="$"+(total/2).toFixed(2);
- document.querySelector("#ribbonTextWrap").style.display=addon.value==="2"?"block":"none";
- document.querySelector("#addressWrap").style.display=delivery.value==="0"?"none":"block";
-}
-[sizeSel,addon,delivery].forEach(x=>x.addEventListener("change",update));update();
 
-document.querySelector("#orderForm").addEventListener("submit",e=>{
- e.preventDefault();
- let total=parseFloat(document.querySelector("#total").textContent.replace("$","")), dep=total/2;
- const order={name:name.value,phone:phone.value,size:size.options[size.selectedIndex].text,rose:rose.value,ribbon:ribbon.value,wrap:wrap.value,addon:addon.options[addon.selectedIndex].text,delivery:delivery.options[delivery.selectedIndex].text,date:date.value,address:address.value,special:special.value,total,deposit:dep,created:new Date().toLocaleString()};
- localStorage.setItem("niss_bloom_last_order",JSON.stringify(order));
- const note=`Hi Niss Bloom! I just placed an order. Name: ${order.name}. Bouquet: ${order.size}. Total: $${total.toFixed(2)}. 50% deposit: $${dep.toFixed(2)}.`;
- const cashapp=`https://cash.app/$LoveniseJp/${dep.toFixed(2)}`;
- document.body.innerHTML=`<main style="max-width:700px;margin:60px auto;padding:25px;text-align:center;font-family:Arial;color:#321b28"><div style="font-size:3rem">🌸</div><h1>Order Ready!</h1><p>Your 50% deposit is <strong>$${dep.toFixed(2)}</strong>.</p><p>Send the deposit to <strong>$LoveniseJp</strong> on Cash App.</p><a class="btn" href="${cashapp}" style="display:inline-block;background:#d94f87;color:white;padding:14px 22px;border-radius:999px;text-decoration:none;font-weight:bold">Open Cash App</a><p style="margin-top:25px">After paying, text <a href="sms:4633363283?body=${encodeURIComponent(note)}">463-336-3283</a> with your payment confirmation.</p><p><a href="${location.pathname}">← Back to Niss Bloom</a></p></main>`;
-});
-</script>
+  <!-- ABOUT -->
+  <section>
+    <div class="section-title">
+      <h2>Welcome to Niss Bloom 💗</h2>
+    </div>
+
+    <div class="about">
+      <p>
+        At Niss Bloom, every bouquet is handmade and customized just for you.
+        Choose your bouquet size, rose color, ribbon, wrapping and cute
+        add-ons to create something special. 🌸
+      </p>
+    </div>
+  </section>
+
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="section-title">
+      <h2>Bouquet Gallery 💐</h2>
+      <p>Some bouquet inspiration for your next order.</p>
+    </div>
+
+    <div class="gallery">
+
+      <div class="gallery-card">
+        <img src="pink-bouquet.jpg" alt="Pink satin rose bouquet">
+        <h3>Pink Satin Roses 🎀</h3>
+      </div>
+
+      <div class="gallery-card">
+        <img src="pink-dark-bouquet.jpg" alt="Pink handmade rose bouquet">
+        <h3>Pink Rose Bouquet 💗</h3>
+      </div>
+
+      <div class="gallery-card">
+        <img src="blue-bouquet.jpg" alt="Blue satin rose bouquet">
+        <h3>Blue Satin Roses 💙</h3>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- PRICES -->
+  <section id="prices">
+    <div class="section-title">
+      <h2>Bouquet Prices 🌹</h2>
+      <p>Choose the size that works for you.</p>
+    </div>
+
+    <div class="price-grid">
+
+      <div class="price-card">
+        <h3>Mini</h3>
+        <div class="price">$25</div>
+        <div class="rose-count">7 roses</div>
+      </div>
+
+      <div class="price-card">
+        <h3>Small</h3>
+        <div class="price">$25</div>
+        <div class="rose-count">12 roses</div>
+      </div>
+
+      <div class="price-card">
+        <h3>Medium</h3>
+        <div class="price">$30</div>
+        <div class="rose-count">18 roses</div>
+      </div>
+
+      <div class="price-card">
+        <h3>Large</h3>
+        <div class="price">$35</div>
+        <div class="rose-count">24 roses</div>
+      </div>
+
+      <div class="price-card">
+        <h3>XL</h3>
+        <div class="price">$40</div>
+        <div class="rose-count">30 roses</div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- EXTRAS -->
+  <section>
+    <div class="section-title">
+      <h2>Customize Your Bouquet ✨</h2>
+    </div>
+
+    <div class="extras-box">
+      <ul>
+        <li>👑 Crown included</li>
+        <li>🦋 Butterfly included</li>
+        <li>🎀 Choose your rose color</li>
+        <li>🎀 Choose your ribbon color</li>
+        <li>🤍 Choose your wrapping color</li>
+        <li>💗 Hello Kitty +$3</li>
+        <li>💙 Stitch +$3</li>
+        <li>🤍 Snoopy +$3</li>
+        <li>✍️ Personalized ribbon text +$2</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- ORDER -->
+  <section class="order-section" id="order">
+
+    <div class="section-title">
+      <h2>Place Your Order 💐</h2>
+      <p>Fill this out with all your bouquet details.</p>
+    </div>
+
+    <div class="order-container">
+
+      <form id="orderForm">
+
+        <div class="two-columns">
+
+          <div>
+            <label for="customerName">Your Name *</label>
+            <input
+              id="customerName"
+              type="text"
+              placeholder="Your name"
+              required
+            >
+          </div>
+
+          <div>
+            <label for="customerPhone">Phone Number *</label>
+            <input
+              id="customerPhone"
+              type="tel"
+              placeholder="Your phone number"
+              required
+            >
+          </div>
+
+        </div>
+
+
+        <div>
+          <label for="customerEmail">Email</label>
+          <input
+            id="customerEmail"
+            type="email"
+            placeholder="your@email.com"
+          >
+        </div>
+
+
+        <div>
+          <label for="size">Bouquet Size *</label>
+
+          <select id="size" required>
+            <option value="">Select a size</option>
+            <option value="Mini - 7 roses" data-price="25">
+              Mini — 7 roses — $25
+            </option>
+            <option value="Small - 12 roses" data-price="25">
+              Small — 12 roses — $25
+            </option>
+            <option value="Medium - 18 roses" data-price="30">
+              Medium — 18 roses — $30
+            </option>
+            <option value="Large - 24 roses" data-price="35">
+              Large — 24 roses — $35
+            </option>
+            <option value="XL - 30 roses" data-price="40">
+              XL — 30 roses — $40
+            </option>
+          </select>
+        </div>
+
+
+        <div class="two-columns">
+
+          <div>
+            <label for="roseColor">Rose Color *</label>
+
+            <input
+              id="roseColor"
+              type="text"
+              placeholder="Pink, blue, red..."
+              required
+            >
+          </div>
+
+          <div>
+            <label for="ribbonColor">Ribbon Color *</label>
+
+            <input
+              id="ribbonColor"
+              type="text"
+              placeholder="White, pink, blue..."
+              required
+            >
+          </div>
+
+        </div>
+
+
+        <div>
+          <label for="wrapColor">Wrapping Color *</label>
+
+          <input
+            id="wrapColor"
+            type="text"
+            placeholder="White, pink, blue..."
+            required
+          >
+        </div>
+
+
+        <div>
+          <label>Add-Ons</label>
+
+          <div class="checkbox-group">
+
+            <label class="check">
+              <input type="checkbox" value="Hello Kitty" data-price="3">
+              Hello Kitty +$3
+            </label>
+
+            <label class="check">
+              <input type="checkbox" value="Stitch" data-price="3">
+              Stitch +$3
+            </label>
+
+            <label class="check">
+              <input type="checkbox" value="Snoopy" data-price="3">
+              Snoopy +$3
+            </label>
+
+          </div>
+        </div>
+
+
+        <div>
+          <label for="personalized">
+            Personalized Ribbon Text +$2
+          </label>
+
+          <input
+            id="personalized"
+            type="text"
+            placeholder="Leave blank if you don't want one"
+          >
+        </div>
+
+
+        <div>
+          <label for="pickup">Pickup / Delivery *</label>
+
+          <select id="pickup" required>
+            <option value="">Choose one</option>
+            <option value="Pickup">Pickup</option>
+            <option value="Delivery">Delivery</option>
+          </select>
+        </div>
+
+
+        <div>
+          <label for="dateNeeded">Date Needed *</label>
+
+          <input
+            id="dateNeeded"
+            type="date"
+            required
+          >
+        </div>
+
+
+        <div>
+          <label for="specialRequests">Special Requests</label>
+
+          <textarea
+            id="specialRequests"
+            placeholder="Tell me anything else you want on your bouquet..."
+          ></textarea>
+        </div>
+
+
+        <div class="deposit-box">
+
+          <strong>💗 50% Deposit Policy</strong>
+
+          <p>
+            A 50% deposit is required before your bouquet is started.
+            The remaining balance is due when the bouquet is completed.
+          </p>
+
+          <br>
+
+          <strong>💵 Cash App: $LoveniseJp</strong>
+
+        </div>
+
+
+        <div class="total-box">
+
+          <h3>Total</h3>
+
+          <div id="total">$0</div>
+
+          <p>
+            Estimated 50% deposit:
+            <strong id="deposit">$0</strong>
+          </p>
+
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">
+          Create My Order Receipt 💐
+        </button>
+
+      </form>
+
+
+      <!-- RECEIPT -->
+      <div id="receipt">
+
+        <div class="receipt-header">
+          <h2>🌸 Niss Bloom 🌸</h2>
+          <p>Custom Handmade Bouquets</p>
+          <p id="receiptDate"></p>
+        </div>
+
+
+        <div class="receipt-row">
+          <span>Customer</span>
+          <strong id="rName"></strong>
+        </div>
+
+        <div class="receipt-row">
+          <span>Phone</span>
+          <strong id="rPhone"></strong>
+        </div>
+
+        <div class="receipt-row">
+          <span>Email</span>
+          <strong id="rEmail"></strong>
+        </div>
+
+        <div class="receipt-row">
+          <span>Bouquet</span>
+          <strong id="rSize"></strong>
+        </div>
+
+        <div class="receipt-row">
+          <span>Rose Color</span>
+          <strong id="rRose"></strong>
+        </div>
+
+        <div class="receipt-row">
+          <span>Ribbon Color</span>
+          <strong id="rRibbon"></strong>
+        </div>
+
+        <div class="receipt-row">
+          <span>Wrapping</span>
+          <strong id="rWrap"></strong>
+        </div>
+
+        <div class="receipt-row">
+          <span>Add-Ons</span>
+          <strong id="rAddons"></strong>
+        </div>
+
+        <div class="receipt-row">
+          <span>Personalized Ribbon</span>
+          <strong id="rPersonalized"></strong>
+        </div>
+
+        <div class="receipt-row">
+          <span>Pickup / Delivery</span>
+          <strong id="rPickup"></strong>
+        </div>
+
+        <div class="receipt-row">
+          <span>Date Needed</span>
+          <strong id="rDate"></strong>
+        </div>
+
+        <div class="receipt-row">
+          <span>Special Requests</span>
+          <strong id="rRequests"></strong>
+        </div>
+
+        <div class="receipt-total">
+          Total: <span id="rTotal"></span>
+        </div>
+
+        <div class="receipt-total">
+          50% Deposit: <span id="rDeposit"></span>
+        </div>
+
+        <div class="receipt-actions">
+
+          <button
+            class="btn btn-primary"
+            onclick="copyReceipt()"
+          >
+            Copy Order Details
+          </button>
+
+          <!--
+            CHANGE THE NUMBER BELOW TO YOUR BUSINESS PHONE NUMBER.
+            Format example:
+            sms:+13175551234
+          -->
+
+          <a
+            id="textButton"
+            class="btn btn-light"
+            href="#"
+          >
+            Text Niss Bloom 📱
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact">
+
+    <div class="section-title">
+      <h2>Let's Connect 💕</h2>
+      <p>
+        Have a question about your bouquet?
+        Contact Niss Bloom!
+      </p>
+    </div>
+
+    <div class="socials">
+
+      <div class="social-buttons">
+
+        <a
+          href="https://www.instagram.com/niss.bloom_/"
+          target="_blank"
+          class="btn btn-primary"
+        >
+          Instagram 📸
+        </a>
+
+        <!--
+          ADD YOUR TIKTOK LINK HERE WHEN YOU HAVE IT.
+        -->
+
+        <a
+          href="https://www.tiktok.com/"
+          target="_blank"
+          class="btn btn-light"
+        >
+          TikTok 🎵
+        </a>
+
+      </div>
+
+      <br>
+
+      <p>
+        📍 Indianapolis, Indiana
+      </p>
+
+      <p>
+        💵 Cash App: <strong>$LoveniseJp</strong>
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      🌸 <strong>Niss Bloom</strong> 🌸
+    </p>
+
+    <p>
+      Custom Handmade Bouquets
+    </p>
+
+    <p>
+      Made with love in Indianapolis 💗
+    </p>
+
+    <br>
+
+    <p>
+      © 2026 Niss Bloom. All rights reserved.
+    </p>
+
+  </footer>
+
+
+  <script>
+
+    const sizeSelect = document.getElementById("size");
+    const totalElement = document.getElementById("total");
+    const depositElement = document.getElementById("deposit");
+    const form = document.getElementById("orderForm");
+    const receipt = document.getElementById("receipt");
+
+    function calculateTotal() {
+
+      let total = 0;
+
+      const selectedSize =
+        sizeSelect.options[sizeSelect.selectedIndex];
+
+      if (selectedSize && selectedSize.dataset.price) {
+        total += Number(selectedSize.dataset.price);
+      }
+
+      document
+        .querySelectorAll('.checkbox-group input[type="checkbox"]:checked')
+        .forEach(item => {
+          total += Number(item.dataset.price || 0);
+        });
+
+      const personalized =
+        document.getElementById("personalized").value.trim();
+
+      if (personalized !== "") {
+        total += 2;
+      }
+
+      totalElement.textContent = "$" + total.toFixed(2);
+      depositElement.textContent = "$" + (total / 2).toFixed(2);
+
+      return total;
+    }
+
+
+    sizeSelect.addEventListener("change", calculateTotal);
+
+    document
+      .querySelectorAll('.checkbox-group input[type="checkbox"]')
+      .forEach(item => {
+        item.addEventListener("change", calculateTotal);
+      });
+
+    document
+      .getElementById("personalized")
+      .addEventListener("input", calculateTotal);
+
+
+    form.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      const total = calculateTotal();
+
+      if (total === 0) {
+        alert("Please choose a bouquet size first.");
+        return;
+      }
+
+      const name =
+        document.getElementById("customerName").value;
+
+      const phone =
+        document.getElementById("customerPhone").value;
+
+      const email =
+        document.getElementById("customerEmail").value || "Not provided";
+
+      const size =
+        document.getElementById("size").value;
+
+      const rose =
+        document.getElementById("roseColor").value;
+
+      const ribbon =
+        document.getElementById("ribbonColor").value;
+
+      const wrap =
+        document.getElementById("wrapColor").value;
+
+      const pickup =
+        document.getElementById("pickup").value;
+
+      const date =
+        document.getElementById("dateNeeded").value;
+
+      const requests =
+        document.getElementById("specialRequests").value || "None";
+
+      const personalized =
+        document.getElementById("personalized").value || "None";
+
+
+      const addons = [];
+
+      document
+        .querySelectorAll('.checkbox-group input[type="checkbox"]:checked')
+        .forEach(item => {
+          addons.push(item.value);
+        });
+
+      const addonText =
+        addons.length > 0
+          ? addons.join(", ")
+          : "None";
+
+
+      document.getElementById("rName").textContent = name;
+      document.getElementById("rPhone").textContent = phone;
+      document.getElementById("rEmail").textContent = email;
+      document.getElementById("rSize").textContent = size;
+      document.getElementById("rRose").textContent = rose;
+      document.getElementById("rRibbon").textContent = ribbon;
+      document.getElementById("rWrap").textContent = wrap;
+      document.getElementById("rAddons").textContent = addonText;
+      document.getElementById("rPersonalized").textContent = personalized;
+      document.getElementById("rPickup").textContent = pickup;
+      document.getElementById("rDate").textContent = date;
+      document.getElementById("rRequests").textContent = requests;
+
+      document.getElementById("rTotal").textContent =
+        "$" + total.toFixed(2);
+
+      document.getElementById("rDeposit").textContent =
+        "$" + (total / 2).toFixed(2);
+
+
+      const now = new Date();
+
+      document.getElementById("receiptDate").textContent =
+        "Order created " + now.toLocaleDateString();
+
+
+      /*
+        TEXT MESSAGE
+
+        IMPORTANT:
+        Replace 13175551234 with YOUR actual business number.
+      */
+
+      const businessNumber = "13175551234";
+
+      const textMessage =
+`Hi Niss Bloom! I just placed an order.
+
+Name: ${name}
+Phone: ${phone}
+Bouquet: ${size}
+Rose Color: ${rose}
+Ribbon Color: ${ribbon}
+Wrapping: ${wrap}
+Add-ons: ${addonText}
+Personalized Ribbon: ${personalized}
+Pickup/Delivery: ${pickup}
+Date Needed: ${date}
+Special Requests: ${requests}
+
+Total: $${total.toFixed(2)}
+50% Deposit: $${(total / 2).toFixed(2)}
+
+Cash App: $LoveniseJp`;
+
+      document.getElementById("textButton").href =
+        "sms:" + businessNumber +
+        "?body=" + encodeURIComponent(textMessage);
+
+
+      receipt.style.display = "block";
+
+      receipt.scrollIntoView({
+        behavior: "smooth"
+      });
+
+    });
+
+
+    function copyReceipt() {
+
+      const text =
+`🌸 NISS BLOOM ORDER 🌸
+
+Customer: ${document.getElementById("rName").textContent}
+Phone: ${document.getElementById("rPhone").textContent}
+Email: ${document.getElementById("rEmail").textContent}
+
+Bouquet: ${document.getElementById("rSize").textContent}
+Rose Color: ${document.getElementById("rRose").textContent}
+Ribbon Color: ${document.getElementById("rRibbon").textContent}
+Wrapping: ${document.getElementById("rWrap").textContent}
+Add-ons: ${document.getElementById("rAddons").textContent}
+Personalized Ribbon: ${document.getElementById("rPersonalized").textContent}
+
+Pickup/Delivery: ${document.getElementById("rPickup").textContent}
+Date Needed: ${document.getElementById("rDate").textContent}
+
+Special Requests:
+${document.getElementById("rRequests").textContent}
+
+TOTAL: ${document.getElementById("rTotal").textContent}
+50% DEPOSIT: ${document.getElementById("rDeposit").textContent}
+
+Cash App: $LoveniseJp`;
+
+      navigator.clipboard.writeText(text)
+        .then(() => {
+          alert("Order details copied! 💗");
+        })
+        .catch(() => {
+          alert("Please select and copy the order details manually.");
+        });
+    }
+
+
+    calculateTotal();
+
+  </script>
+
 </body>
 </html>
