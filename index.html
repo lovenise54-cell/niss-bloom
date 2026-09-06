@@ -11,14 +11,6 @@
     content="Niss Bloom — custom handmade bouquets made with love in Indianapolis."
   >
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Great+Vibes&family=Poppins:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
-
   <style>
     * {
       box-sizing: border-box;
@@ -30,1299 +22,570 @@
       scroll-behavior: smooth;
     }
 
-    :root {
-      --black: #080808;
-      --card: #151515;
-      --dark-red: #4b0000;
-      --burgundy: #650914;
-      --red: #8f1024;
-      --bright-red: #b51e37;
-      --cream: #f6eeee;
-      --gray: #b8a8aa;
-      --border: #43151c;
-    }
-
     body {
-      font-family: "Poppins", Arial, sans-serif;
-      background: var(--black);
-      color: var(--cream);
+      font-family: Georgia, "Times New Roman", serif;
+      background: #160509;
+      color: #fff5f7;
       line-height: 1.6;
-    }
-
-    .first-order-special {
-      background: var(--dark-red);
-      color: white;
-      text-align: center;
-      padding: 11px 15px;
-      font-size: 14px;
-      font-weight: 600;
-      border-bottom: 1px solid var(--red);
-    }
-
-    .first-order-special span {
-      display: block;
-      font-size: 12px;
-      color: #e8d5d8;
-      font-weight: 400;
     }
 
     nav {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(8,8,8,.97);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      padding: 15px 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      background: #21070d;
+      border-bottom: 1px solid #6e2638;
+      padding: 15px 10px;
+      text-align: center;
     }
 
-    .logo {
-      font-family: "Great Vibes", cursive;
-      font-size: 34px;
-      color: var(--bright-red);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 22px;
-      list-style: none;
-    }
-
-    .nav-links a {
+    nav a {
+      color: #ffd9e2;
       text-decoration: none;
-      color: #eee;
-      font-size: 13px;
-      font-weight: 600;
+      margin: 0 8px;
+      font-size: 14px;
     }
 
-    .nav-links a:hover {
-      color: var(--bright-red);
+    nav a:hover {
+      color: #fff;
     }
 
     .hero {
-      min-height: 90vh;
+      min-height: 85vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 80px 20px;
-
+      padding: 60px 20px;
       background:
-        linear-gradient(
-          rgba(0,0,0,.72),
-          rgba(35,0,5,.9)
-        ),
-        url("./1000152215.jpg") center/cover;
+        linear-gradient(rgba(35, 4, 11, .75), rgba(35, 4, 11, .9)),
+        radial-gradient(circle at center, #76152e, #160509 70%);
     }
 
     .hero-content {
-      max-width: 850px;
+      max-width: 750px;
     }
 
     .hero h1 {
-      font-family: "Great Vibes", cursive;
-      font-size: clamp(70px, 13vw, 125px);
-      color: var(--bright-red);
-      line-height: .95;
-      margin-bottom: 20px;
+      font-size: clamp(45px, 10vw, 85px);
+      font-style: italic;
+      font-weight: normal;
+      color: #fff0f4;
+      margin-bottom: 10px;
     }
 
     .hero p {
       font-size: 18px;
-      color: #f2e8e9;
-      margin-bottom: 32px;
+      color: #f5cbd5;
+      margin-bottom: 25px;
     }
 
-    .buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn {
+    .button {
       display: inline-block;
+      background: #8d1d3b;
+      color: white;
       padding: 13px 25px;
       border-radius: 30px;
-      cursor: pointer;
       text-decoration: none;
-      font-family: "Poppins", sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      transition: .25s;
+      border: 1px solid #c95a77;
+      transition: .2s;
     }
 
-    .btn-primary {
-      background: var(--red);
-      color: white;
-      border: 1px solid var(--bright-red);
-    }
-
-    .btn-primary:hover {
-      background: var(--bright-red);
+    .button:hover {
+      background: #b52c50;
       transform: translateY(-2px);
     }
 
-    .btn-light {
-      background: transparent;
-      color: #e5cdd1;
-      border: 1px solid var(--red);
-    }
-
-    .btn-light:hover {
-      background: var(--dark-red);
-    }
-
     section {
-      padding: 80px 6%;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .section-title h2 {
-      font-family: "Great Vibes", cursive;
-      font-size: 50px;
-      font-weight: 400;
-      color: var(--bright-red);
-    }
-
-    .section-title p {
-      color: var(--gray);
-      font-size: 14px;
-    }
-
-    .about {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-      font-size: 17px;
-      color: #d8c9cb;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
-      gap: 24px;
+      padding: 65px 20px;
       max-width: 1100px;
       margin: auto;
     }
 
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      color: #ffd5df;
+      font-size: 34px;
+      font-style: italic;
+      font-weight: normal;
+    }
+
+    .section-title p {
+      color: #d8aab6;
+      margin-top: 5px;
+    }
+
+    /* GALLERY */
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
     .gallery-card {
-      background: var(--card);
-      border: 1px solid var(--border);
+      background: #250a11;
+      border: 1px solid #6e2638;
       border-radius: 18px;
+      padding: 12px;
+      text-align: center;
       overflow: hidden;
     }
 
     .gallery-card img {
-      width: 100%;
-      height: 360px;
-      object-fit: cover;
       display: block;
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 12px;
+      background: #3b101c;
     }
 
     .gallery-card h3 {
-      padding: 17px;
-      text-align: center;
-      color: #e2c6ca;
-      font-family: "DM Serif Display", serif;
+      color: #ffd7e0;
       font-size: 19px;
-      font-weight: 400;
+      margin-top: 13px;
+      font-weight: normal;
     }
+
+    /* PRICES */
 
     .price-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(170px,1fr));
-      gap: 18px;
-      max-width: 1000px;
-      margin: auto;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
     }
 
     .price-card {
-      background: var(--card);
-      padding: 27px 15px;
+      background: #250a11;
+      border: 1px solid #6e2638;
+      border-radius: 15px;
+      padding: 25px 15px;
       text-align: center;
-      border: 1px solid var(--border);
-      border-radius: 18px;
     }
 
     .price-card h3 {
-      font-family: "DM Serif Display", serif;
-      color: #d6aeb4;
+      color: #ffd5df;
       font-size: 21px;
-      font-weight: 400;
     }
 
     .price {
-      color: var(--bright-red);
-      font-size: 29px;
-      font-weight: 800;
-      margin: 7px 0;
+      color: #fff;
+      font-size: 24px;
+      margin-top: 7px;
     }
 
-    .rose-count {
-      color: var(--gray);
-      font-size: 13px;
-    }
-
-    .extras-box {
-      max-width: 800px;
-      margin: auto;
-      background: var(--card);
-      padding: 30px;
-      border-radius: 20px;
-      border: 1px solid var(--border);
-    }
-
-    .extras-box ul {
-      list-style: none;
-    }
-
-    .extras-box li {
-      padding: 11px 0;
-      border-bottom: 1px solid #291215;
-      color: #ddd0d2;
+    .price-card p {
+      color: #cfa4ae;
       font-size: 14px;
     }
 
-    .order-section {
-      background:
-        radial-gradient(
-          circle at top,
-          #310000 0%,
-          #130607 35%,
-          #080808 75%
-        );
-    }
+    /* EXTRAS */
 
-    .order-container {
-      max-width: 850px;
+    .extras {
+      max-width: 700px;
       margin: auto;
-      background: #111;
-      padding: 35px;
-      border-radius: 24px;
-      border: 1px solid var(--border);
+      background: #250a11;
+      border: 1px solid #6e2638;
+      border-radius: 18px;
+      padding: 25px;
     }
 
-    form {
-      display: grid;
-      gap: 18px;
+    .extras p {
+      padding: 7px 0;
+      color: #f0cbd3;
+    }
+
+    /* ORDER */
+
+    .order-box {
+      max-width: 700px;
+      margin: auto;
+      background: #250a11;
+      border: 1px solid #6e2638;
+      border-radius: 20px;
+      padding: 25px;
     }
 
     label {
       display: block;
-      margin-bottom: 6px;
-      color: #eee1e3;
-      font-size: 14px;
-      font-weight: 600;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      color: #ffd5df;
     }
 
     input,
     select,
     textarea {
       width: 100%;
-      padding: 13px;
-      background: #090909;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #713044;
+      background: #160509;
       color: white;
-      border: 1px solid #452025;
-      border-radius: 11px;
-      outline: none;
-      font-family: "Poppins", sans-serif;
-      font-size: 14px;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-      border-color: var(--red);
-    }
-
-    select option {
-      background: #111;
-      color: white;
+      font-family: inherit;
+      font-size: 15px;
     }
 
     textarea {
-      min-height: 115px;
+      min-height: 110px;
       resize: vertical;
     }
 
-    .two-columns {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-    }
-
-    .checkbox-group {
-      display: grid;
-      gap: 9px;
-    }
-
-    .check {
-      display: flex;
-      gap: 9px;
-      align-items: center;
-      font-weight: 400;
-      margin: 0;
-    }
-
-    .check input {
-      width: auto;
-      accent-color: var(--red);
-    }
-
-    .deposit-box {
-      background: #21070b;
-      padding: 18px;
-      border-radius: 14px;
-      border: 1px solid #51141e;
-      color: #d8c5c8;
-      font-size: 13px;
-    }
-
-    .deposit-box strong {
-      color: #d21f3c;
-    }
-
-    .total-box {
-      background: linear-gradient(135deg,#350006,#0a0a0a);
-      color: white;
-      padding: 21px;
-      border-radius: 16px;
-      text-align: center;
-      border: 1px solid #5c111c;
-    }
-
-    .total-box h3 {
-      font-family: "DM Serif Display", serif;
-      font-size: 22px;
-      font-weight: 400;
-    }
-
-    #total {
-      color: #d21f3c;
-      font-size: 36px;
-      font-weight: 800;
-    }
-
-    #deposit {
-      color: #d8aeb5;
-    }
-
-    #receipt {
-      display: none;
-      max-width: 850px;
-      margin: 35px auto 0;
-      background: #111;
-      border: 1px dashed #8f1024;
-      border-radius: 20px;
-      padding: 28px;
-    }
-
-    .receipt-header {
-      text-align: center;
-      border-bottom: 1px solid #39151a;
-      padding-bottom: 15px;
-      margin-bottom: 15px;
-    }
-
-    .receipt-header h2 {
-      font-family: "Great Vibes", cursive;
-      font-size: 43px;
-      color: var(--bright-red);
-    }
-
-    .receipt-header p {
-      color: var(--gray);
-      font-size: 13px;
-    }
-
-    .receipt-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 8px 0;
-      border-bottom: 1px solid #241417;
-      font-size: 13px;
-    }
-
-    .receipt-row strong {
-      color: #d21f3c;
-      text-align: right;
-    }
-
-    .receipt-total {
-      margin-top: 15px;
-      font-size: 18px;
-      font-weight: 800;
-    }
-
-    .receipt-total span {
-      color: #d21f3c;
-    }
-
-    .receipt-actions {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
+    .submit-button {
+      width: 100%;
       margin-top: 22px;
+      padding: 14px;
+      border: none;
+      border-radius: 30px;
+      background: #8d1d3b;
+      color: white;
+      font-size: 17px;
+      font-family: inherit;
+      cursor: pointer;
     }
 
-    .socials {
+    .submit-button:hover {
+      background: #b52c50;
+    }
+
+    .notice {
+      margin-top: 18px;
+      padding: 15px;
+      border-radius: 12px;
+      background: #3a101b;
+      color: #f4cbd5;
+      font-size: 14px;
+    }
+
+    /* SOCIAL */
+
+    .social {
       text-align: center;
     }
 
-    .socials p {
-      color: var(--gray);
-      font-size: 14px;
-      margin: 5px 0;
-    }
-
-    .social-buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 20px;
+    .social a {
+      display: inline-block;
+      margin: 7px;
+      color: #ffd5df;
+      text-decoration: none;
+      border: 1px solid #6e2638;
+      padding: 10px 17px;
+      border-radius: 25px;
     }
 
     footer {
       text-align: center;
-      padding: 30px 20px;
-      background: #050505;
-      border-top: 1px solid var(--border);
-      color: #8f7f82;
-      font-size: 12px;
+      padding: 30px 15px;
+      color: #ad7b88;
+      border-top: 1px solid #3c131e;
+      background: #100306;
     }
 
-    footer strong {
-      color: var(--bright-red);
+    @media (max-width: 600px) {
+      nav a {
+        display: inline-block;
+        margin: 4px 5px;
+        font-size: 13px;
+      }
+
+      .gallery-card img {
+        height: 300px;
+      }
     }
-
-    @media (max-width: 700px) {
-
-      nav {
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .nav-links {
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .nav-links a {
-        font-size: 11px;
-      }
-
-      .hero {
-        min-height: 75vh;
-      }
-
-      .hero h1 {
-        font-size: 75px;
-      }
-
-      .hero p {
-        font-size: 15px;
-      }
-
-      section {
-        padding: 60px 5%;
-      }
-
-      .two-columns {
-        grid-template-columns: 1fr;
-      }
-
-      .order-container {
-        padding: 22px;
-      }
-
-      .receipt-row {
-        flex-direction: column;
-        gap: 2px;
-      }
-
-    }
-
   </style>
 </head>
 
 <body>
 
-  <!-- FIRST ORDER -->
-  <div class="first-order-special">
-    15% OFF YOUR FIRST ORDER
-    <span>Start your first Niss Bloom order with a special discount.</span>
-  </div>
-
   <!-- NAVIGATION -->
   <nav>
-    <div class="logo">Niss Bloom</div>
-
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#prices">Prices</a></li>
-      <li><a href="#order">Order</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <a href="#home">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#prices">Prices</a>
+    <a href="#extras">Extras</a>
+    <a href="#order">Order</a>
+    <a href="#social">Social</a>
   </nav>
 
   <!-- HOME -->
-  <section class="hero" id="home">
-
+  <header class="hero" id="home">
     <div class="hero-content">
-
       <h1>Niss Bloom</h1>
-
-      <p>
-        Custom handmade bouquets created specially for you.
-      </p>
-
-      <div class="buttons">
-        <a href="#order" class="btn btn-primary">Order Now</a>
-        <a href="#gallery" class="btn btn-light">View Gallery</a>
-      </div>
-
+      <p>Custom Handmade Bouquets</p>
+      <p>Beautiful bouquets made with love in Indianapolis.</p>
+      <a href="#order" class="button">Order Your Bouquet</a>
     </div>
-
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-
-    <div class="section-title">
-      <h2>About Niss Bloom</h2>
-      <p>Handmade with care in Indianapolis.</p>
-    </div>
-
-    <div class="about">
-      <p>
-        Welcome to Niss Bloom — where every bouquet is handmade with love.
-        Choose your bouquet size, colors, ribbon and special extras to create
-        something unique for yourself or someone special.
-      </p>
-    </div>
-
-  </section>
+  </header>
 
   <!-- GALLERY -->
   <section id="gallery">
-
     <div class="section-title">
       <h2>Bouquet Gallery</h2>
       <p>Some bouquet inspiration for your next order.</p>
     </div>
 
-    
+    <div class="gallery">
+
+      <div class="gallery-card">
+        <img
+          src="./e92baa2e481ef0e421121cf37a3cffb6.jpg"
+          alt="Niss Bloom handmade bouquet"
+        >
+        <h3>Custom Satin Roses</h3>
+      </div>
+
+      <div class="gallery-card">
+        <img
+          src="./IMG-20260903-WA0015.jpg"
+          alt="Niss Bloom handmade bouquet"
+        >
+        <h3>Custom Bouquet</h3>
+      </div>
 
     </div>
-
   </section>
 
   <!-- PRICES -->
   <section id="prices">
-
     <div class="section-title">
-      <h2>Bouquet Prices</h2>
-      <p>Choose the size that works best for you.</p>
+      <h2>Bouquet Sizes & Prices</h2>
+      <p>Choose the size that fits your vision.</p>
     </div>
 
     <div class="price-grid">
 
       <div class="price-card">
         <h3>Mini</h3>
+        <p>7 roses</p>
         <div class="price">$15</div>
-        <div class="rose-count">5 roses</div>
-      
-    <div class="gallery">
-
-      <div class="gallery-card">
-        <img src="./e92baa2e481ef0e421121cf37a3cffb6.jpg" alt="Red satin rose bouquet">
-        <h3>Red Satin Roses ❤️</h3>
       </div>
-
-      <div class="gallery-card">
-        <img
-          src="./1000152215.jpg"
-          alt="Pink and white butterfly bouquet"
-        >
-        <h3>Pink Butterfly Bouquet 🦋</h3>
-      </div>
-
-    </div>
 
       <div class="price-card">
         <h3>Small</h3>
+        <p>12 roses</p>
         <div class="price">$25</div>
-        <div class="rose-count">12 roses</div>
       </div>
 
       <div class="price-card">
         <h3>Medium</h3>
+        <p>18 roses</p>
         <div class="price">$30</div>
-        <div class="rose-count">18 roses</div>
       </div>
 
       <div class="price-card">
         <h3>Large</h3>
+        <p>24 roses</p>
         <div class="price">$35</div>
-        <div class="rose-count">24 roses</div>
       </div>
 
       <div class="price-card">
         <h3>XL</h3>
+        <p>30 roses</p>
         <div class="price">$40</div>
-        <div class="rose-count">30 roses</div>
       </div>
 
     </div>
-
   </section>
 
   <!-- EXTRAS -->
-  <section>
-
+  <section id="extras">
     <div class="section-title">
-      <h2>Customization</h2>
-      <p>Make your bouquet yours.</p>
+      <h2>Add-Ons</h2>
+      <p>Make your bouquet extra special.</p>
     </div>
 
-    <div class="extras-box">
-
-      <ul>
-        <li>Choose your rose color</li>
-        <li>Choose your ribbon color</li>
-        <li>Choose your wrap color</li>
-        <li>Crown included</li>
-        <li>Butterfly included</li>
-        <li>Hello Kitty +$3</li>
-        <li>Stitch +$3</li>
-        <li>Snoopy +$3</li>
-        <li>Personalized ribbon text +$2</li>
-      </ul>
-
+    <div class="extras">
+      <p>♛ Crown — Included</p>
+      <p>🦋 Butterfly — Included</p>
+      <p>Hello Kitty — +$3</p>
+      <p>Stitch — +$3</p>
+      <p>Snoopy — +$3</p>
+      <p>Personalized ribbon text — +$2</p>
     </div>
-
   </section>
 
   <!-- ORDER -->
-  <section class="order-section" id="order">
-
+  <section id="order">
     <div class="section-title">
-      <h2>Make Your Order</h2>
-      <p>Fill out the form below to customize your bouquet.</p>
+      <h2>Place Your Order</h2>
+      <p>Fill out the form with your bouquet details.</p>
     </div>
 
-    <div class="order-container">
+    <div class="order-box">
 
       <form id="orderForm">
 
-        <div>
-          <label for="name">Your Name *</label>
-          <input
-            id="name"
-            type="text"
-            required
-            placeholder="Enter your name"
-          >
-        </div>
+        <label for="name">Your Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Your name"
+        >
 
-        <div>
-          <label for="phone">Phone Number *</label>
-          <input
-            id="phone"
-            type="tel"
-            required
-            placeholder="Enter your phone number"
-          >
-        </div>
+        <label for="phone">Your Phone Number</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          required
+          placeholder="Your phone number"
+        >
 
-        <div>
-          <label for="size">Bouquet Size *</label>
+        <label for="size">Bouquet Size</label>
+        <select id="size" name="size" required>
+          <option value="">Select a size</option>
+          <option value="Mini - 7 roses - $15">Mini — 7 roses — $15</option>
+          <option value="Small - 12 roses - $25">Small — 12 roses — $25</option>
+          <option value="Medium - 18 roses - $30">Medium — 18 roses — $30</option>
+          <option value="Large - 24 roses - $35">Large — 24 roses — $35</option>
+          <option value="XL - 30 roses - $40">XL — 30 roses — $40</option>
+        </select>
 
-          <select id="size" required>
-            <option value="">Choose a size</option>
-            <option value="Mini" data-price="15">Mini — $15</option>
-            <option value="Small" data-price="25">Small — $25</option>
-            <option value="Medium" data-price="30">Medium — $30</option>
-            <option value="Large" data-price="35">Large — $35</option>
-            <option value="XL" data-price="40">XL — $40</option>
-          </select>
-        </div>
+        <label for="roseColor">Rose Color</label>
+        <input
+          type="text"
+          id="roseColor"
+          name="roseColor"
+          required
+          placeholder="Example: red"
+        >
 
-        <div class="two-columns">
+        <label for="ribbonColor">Ribbon Color</label>
+        <input
+          type="text"
+          id="ribbonColor"
+          name="ribbonColor"
+          required
+          placeholder="Example: black"
+        >
 
-          <div>
-            <label for="roseColor">Rose Color *</label>
+        <label for="wrapColor">Wrap Color</label>
+        <input
+          type="text"
+          id="wrapColor"
+          name="wrapColor"
+          required
+          placeholder="Example: white"
+        >
 
-            <select id="roseColor" required>
-              <option value="">Choose color</option>
-              <option>Red</option>
-              <option>Pink</option>
-              <option>White</option>
-              <option>Black</option>
-              <option>Dark Red</option>
-              <option>Custom</option>
-            </select>
-          </div>
+        <label for="addon">Add-On</label>
+        <select id="addon" name="addon">
+          <option value="None">None</option>
+          <option value="Hello Kitty +$3">Hello Kitty +$3</option>
+          <option value="Stitch +$3">Stitch +$3</option>
+          <option value="Snoopy +$3">Snoopy +$3</option>
+          <option value="Personalized Ribbon +$2">
+            Personalized Ribbon +$2
+          </option>
+        </select>
 
-          <div>
-            <label for="ribbonColor">Ribbon Color *</label>
+        <label for="delivery">Pickup or Delivery</label>
+        <select id="delivery" name="delivery" required>
+          <option value="">Select one</option>
+          <option value="Pickup">Pickup</option>
+          <option value="Delivery">Delivery</option>
+        </select>
 
-            <select id="ribbonColor" required>
-              <option value="">Choose color</option>
-              <option>Red</option>
-              <option>Pink</option>
-              <option>White</option>
-              <option>Black</option>
-              <option>Gold</option>
-              <option>Silver</option>
-              <option>Custom</option>
-            </select>
-          </div>
+        <label for="date">Date Needed</label>
+        <input
+          type="date"
+          id="date"
+          name="date"
+          required
+        >
 
-        </div>
+        <label for="requests">Special Requests</label>
+        <textarea
+          id="requests"
+          name="requests"
+          placeholder="Tell us anything else you want for your bouquet."
+        ></textarea>
 
-        <div>
-          <label for="wrapColor">Wrap Color *</label>
-
-          <select id="wrapColor" required>
-            <option value="">Choose color</option>
-            <option>Black</option>
-            <option>White</option>
-            <option>Red</option>
-            <option>Pink</option>
-            <option>Dark Red</option>
-            <option>Custom</option>
-          </select>
-        </div>
-
-        <div>
-
-          <label>Add-ons</label>
-
-          <div class="checkbox-group">
-
-            <label class="check">
-              <input
-                type="checkbox"
-                value="Hello Kitty"
-                data-price="3"
-              >
-              Hello Kitty +$3
-            </label>
-
-            <label class="check">
-              <input
-                type="checkbox"
-                value="Stitch"
-                data-price="3"
-              >
-              Stitch +$3
-            </label>
-
-            <label class="check">
-              <input
-                type="checkbox"
-                value="Snoopy"
-                data-price="3"
-              >
-              Snoopy +$3
-            </label>
-
-            <label class="check">
-              <input
-                type="checkbox"
-                value="Personalized Ribbon"
-                data-price="2"
-              >
-              Personalized Ribbon +$2
-            </label>
-
-          </div>
-
-        </div>
-
-        <div class="two-columns">
-
-          <div>
-            <label for="method">Pickup or Delivery *</label>
-
-            <select id="method" required>
-              <option value="">Choose one</option>
-              <option>Pickup</option>
-              <option>Delivery</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="date">Date Needed *</label>
-            <input id="date" type="date" required>
-          </div>
-
-        </div>
-
-        <div>
-
-          <label for="notes">Special Requests</label>
-
-          <textarea
-            id="notes"
-            placeholder="Tell me anything special you want included..."
-          ></textarea>
-
-        </div>
-
-        <div class="deposit-box">
-
-          <strong>50% deposit required.</strong>
-
-          Your bouquet will be started after the required deposit is received.
-
-          Payment method: Cash App.
-
-        </div>
-
-        <div class="total-box">
-
-          <h3>Order Total</h3>
-
-          <div id="total">$0.00</div>
-
-          <p>
-            50% Deposit:
-            <strong id="deposit">$0.00</strong>
-          </p>
-
-        </div>
-
-        <button type="submit" class="btn btn-primary">
-          Make My Order
+        <button type="submit" class="submit-button">
+          Send Order
         </button>
+
+        <div class="notice">
+          A 50% deposit is required before your bouquet is started.
+          Cash App is accepted for payment.
+        </div>
 
       </form>
 
     </div>
-
-    <!-- RECEIPT -->
-    <div id="receipt">
-
-      <div class="receipt-header">
-
-        <h2>Niss Bloom</h2>
-
-        <p>Custom Handmade Bouquet Order</p>
-
-      </div>
-
-      <div class="receipt-row">
-        <span>Name</span>
-        <strong id="rName"></strong>
-      </div>
-
-      <div class="receipt-row">
-        <span>Phone</span>
-        <strong id="rPhone"></strong>
-      </div>
-
-      <div class="receipt-row">
-        <span>Bouquet</span>
-        <strong id="rSize"></strong>
-      </div>
-
-      <div class="receipt-row">
-        <span>Rose Color</span>
-        <strong id="rRose"></strong>
-      </div>
-
-      <div class="receipt-row">
-        <span>Ribbon Color</span>
-        <strong id="rRibbon"></strong>
-      </div>
-
-      <div class="receipt-row">
-        <span>Wrap Color</span>
-        <strong id="rWrap"></strong>
-      </div>
-
-      <div class="receipt-row">
-        <span>Add-ons</span>
-        <strong id="rAddons"></strong>
-      </div>
-
-      <div class="receipt-row">
-        <span>Pickup / Delivery</span>
-        <strong id="rMethod"></strong>
-      </div>
-
-      <div class="receipt-row">
-        <span>Date Needed</span>
-        <strong id="rDate"></strong>
-      </div>
-
-      <div class="receipt-row">
-        <span>Special Requests</span>
-        <strong id="rNotes"></strong>
-      </div>
-
-      <div class="receipt-total">
-
-        Total:
-        <span id="rTotal">$0.00</span>
-
-        <br>
-
-        50% Deposit:
-        <span id="rDeposit">$0.00</span>
-
-      </div>
-
-      <div class="receipt-actions">
-
-        <button class="btn btn-primary" onclick="sendOrder()">
-          Send Order to Niss Bloom
-        </button>
-
-        <button class="btn btn-light" onclick="copyOrder()">
-          Copy Order
-        </button>
-
-        <button class="btn btn-light" onclick="window.print()">
-          Print Receipt
-        </button>
-
-      </div>
-
-    </div>
-
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-
+  <!-- SOCIAL -->
+  <section id="social">
     <div class="section-title">
-      <h2>Contact Niss Bloom</h2>
-      <p>Have a question? Reach out through social media.</p>
+      <h2>Follow Niss Bloom</h2>
+      <p>Follow for bouquet inspiration and updates.</p>
     </div>
 
-    <div class="socials">
+    <div class="social">
+      <a
+        href="https://www.instagram.com/niss.bloom_/"
+        target="_blank"
+      >
+        Instagram: @niss.bloom_
+      </a>
 
-      <p>
-        Instagram:
-        <strong>@niss.bloom_</strong>
-      </p>
-
-      <p>
-        TikTok:
-        <strong>@niss.bloom_</strong>
-      </p>
-
-      <div class="social-buttons">
-
-        <a
-          class="btn btn-primary"
-          href="https://instagram.com/niss.bloom_"
-          target="_blank"
-          rel="noopener"
-        >
-          Instagram
-        </a>
-
-        <a
-          class="btn btn-light"
-          href="https://www.tiktok.com/@niss.bloom_"
-          target="_blank"
-          rel="noopener"
-        >
-          TikTok
-        </a>
-
-      </div>
-
+      <a
+        href="https://www.tiktok.com/@niss.bloom_"
+        target="_blank"
+      >
+        TikTok: @niss.bloom_
+      </a>
     </div>
-
   </section>
 
   <!-- FOOTER -->
   <footer>
-
-    <p>
-      © 2026 <strong>Niss Bloom</strong> · Custom Handmade Bouquets
-    </p>
-
-    <p>
-      Indianapolis, Indiana
-    </p>
-
+    <p>© 2026 Niss Bloom. Custom Handmade Bouquets.</p>
+    <p>Indianapolis, Indiana</p>
   </footer>
 
   <script>
-
-    /* =========================
-       PRICE CALCULATOR
-    ========================= */
-
-    const sizeSelect = document.getElementById("size");
-    const totalDisplay = document.getElementById("total");
-    const depositDisplay = document.getElementById("deposit");
-
-    const addonInputs = document.querySelectorAll(
-      'input[type="checkbox"][data-price]'
-    );
-
-    function calculateTotal() {
-
-      let total = 0;
-
-      const selectedSize =
-        sizeSelect.options[sizeSelect.selectedIndex];
-
-      if (selectedSize && selectedSize.dataset.price) {
-        total += Number(selectedSize.dataset.price);
-      }
-
-      addonInputs.forEach(function(addon) {
-
-        if (addon.checked) {
-          total += Number(addon.dataset.price);
-        }
-
-      });
-
-      const deposit = total * 0.50;
-
-      totalDisplay.textContent =
-        "$" + total.toFixed(2);
-
-      depositDisplay.textContent =
-        "$" + deposit.toFixed(2);
-
-      return {
-        total: total,
-        deposit: deposit
-      };
-
-    }
-
-    sizeSelect.addEventListener("change", calculateTotal);
-
-    addonInputs.forEach(function(addon) {
-      addon.addEventListener("change", calculateTotal);
-    });
-
-    calculateTotal();
-
-
-    /* =========================
-       MAKE ORDER BUTTON
-    ========================= */
-
     document
       .getElementById("orderForm")
       .addEventListener("submit", function(event) {
 
         event.preventDefault();
 
-        const name =
-          document.getElementById("name").value.trim();
+        const name = document.getElementById("name").value;
+        const phone = document.getElementById("phone").value;
+        const size = document.getElementById("size").value;
+        const roseColor = document.getElementById("roseColor").value;
+        const ribbonColor = document.getElementById("ribbonColor").value;
+        const wrapColor = document.getElementById("wrapColor").value;
+        const addon = document.getElementById("addon").value;
+        const delivery = document.getElementById("delivery").value;
+        const date = document.getElementById("date").value;
+        const requests = document.getElementById("requests").value;
 
-        const phone =
-          document.getElementById("phone").value.trim();
+        const message =
+          "NISS BLOOM ORDER%0A%0A" +
+          "Name: " + encodeURIComponent(name) + "%0A" +
+          "Customer Phone: " + encodeURIComponent(phone) + "%0A" +
+          "Bouquet: " + encodeURIComponent(size) + "%0A" +
+          "Rose Color: " + encodeURIComponent(roseColor) + "%0A" +
+          "Ribbon Color: " + encodeURIComponent(ribbonColor) + "%0A" +
+          "Wrap Color: " + encodeURIComponent(wrapColor) + "%0A" +
+          "Add-On: " + encodeURIComponent(addon) + "%0A" +
+          "Pickup/Delivery: " + encodeURIComponent(delivery) + "%0A" +
+          "Date Needed: " + encodeURIComponent(date) + "%0A" +
+          "Special Requests: " + encodeURIComponent(requests);
 
-        const size =
-          document.getElementById("size").value;
-
-        const rose =
-          document.getElementById("roseColor").value;
-
-        const ribbon =
-          document.getElementById("ribbonColor").value;
-
-        const wrap =
-          document.getElementById("wrapColor").value;
-
-        const method =
-          document.getElementById("method").value;
-
-        const date =
-          document.getElementById("date").value;
-
-        const notes =
-          document.getElementById("notes").value.trim();
-
-        if (
-          !name ||
-          !phone ||
-          !size ||
-          !rose ||
-          !ribbon ||
-          !wrap ||
-          !method ||
-          !date
-        ) {
-
-          alert(
-            "Please fill out all required fields before placing your order."
-          );
-
-          return;
-
-        }
-
-        const addons = [];
-
-        addonInputs.forEach(function(addon) {
-
-          if (addon.checked) {
-            addons.push(
-              addon.value + " (+$" + addon.dataset.price + ")"
-            );
-          }
-
-        });
-
-        const prices = calculateTotal();
-
-        document.getElementById("rName").textContent = name;
-        document.getElementById("rPhone").textContent = phone;
-        document.getElementById("rSize").textContent = size;
-        document.getElementById("rRose").textContent = rose;
-        document.getElementById("rRibbon").textContent = ribbon;
-        document.getElementById("rWrap").textContent = wrap;
-
-        document.getElementById("rAddons").textContent =
-          addons.length
-            ? addons.join(", ")
-            : "None";
-
-        document.getElementById("rMethod").textContent = method;
-        document.getElementById("rDate").textContent = date;
-
-        document.getElementById("rNotes").textContent =
-          notes || "None";
-
-        document.getElementById("rTotal").textContent =
-          "$" + prices.total.toFixed(2);
-
-        document.getElementById("rDeposit").textContent =
-          "$" + prices.deposit.toFixed(2);
-
-        const receipt =
-          document.getElementById("receipt");
-
-        receipt.style.display = "block";
-
-        receipt.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-
+        window.location.href =
+          "sms:4633363283?body=" + message;
       });
-
-
-    /* =========================
-       SEND ORDER TO PHONE
-    ========================= */
-
-    function getOrderText() {
-
-      return `NISS BLOOM ORDER
-
-Name: ${document.getElementById("rName").textContent}
-
-Customer Phone: ${document.getElementById("rPhone").textContent}
-
-Bouquet: ${document.getElementById("rSize").textContent}
-
-Rose Color: ${document.getElementById("rRose").textContent}
-
-Ribbon Color: ${document.getElementById("rRibbon").textContent}
-
-Wrap Color: ${document.getElementById("rWrap").textContent}
-
-Add-ons: ${document.getElementById("rAddons").textContent}
-
-Pickup/Delivery: ${document.getElementById("rMethod").textContent}
-
-Date Needed: ${document.getElementById("rDate").textContent}
-
-Special Requests: ${document.getElementById("rNotes").textContent}
-
-Total: ${document.getElementById("rTotal").textContent}
-
-50% Deposit: ${document.getElementById("rDeposit").textContent}`;
-
-    }
-
-
-    function sendOrder() {
-
-      const orderText = getOrderText();
-
-      const phoneNumber = "4633363283";
-
-      const smsLink =
-        "sms:" +
-        phoneNumber +
-        "?body=" +
-        encodeURIComponent(orderText);
-
-      window.location.href = smsLink;
-
-    }
-
-
-    /* =========================
-       COPY ORDER
-    ========================= */
-
-    function copyOrder() {
-
-      const text = getOrderText();
-
-      navigator.clipboard.writeText(text)
-        .then(function() {
-
-          alert(
-            "Order copied! You can now paste it into your messages."
-          );
-
-        })
-        .catch(function() {
-
-          alert(
-            "Your receipt is ready. You can use the Print Receipt button to save it."
-          );
-
-        });
-
-    }
-
-
-    /* =========================
-       MINIMUM DATE
-    ========================= */
-
-    const dateInput =
-      document.getElementById("date");
-
-    const today =
-      new Date().toISOString().split("T")[0];
-
-    dateInput.min = today;
-
   </script>
 
 </body>
