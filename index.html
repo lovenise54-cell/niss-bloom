@@ -236,6 +236,63 @@
       resize: vertical;
     }
 
+    /* ORDER TOTAL */
+
+    .order-summary {
+      margin-top: 25px;
+      padding: 20px;
+      background: #160509;
+      border: 1px solid #8d1d3b;
+      border-radius: 15px;
+    }
+
+    .order-summary h3 {
+      text-align: center;
+      color: #ffd5df;
+      font-size: 23px;
+      font-style: italic;
+      font-weight: normal;
+      margin-bottom: 15px;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 8px 0;
+      color: #f4cbd5;
+      border-bottom: 1px solid #3c131e;
+    }
+
+    .summary-row:last-child {
+      border-bottom: none;
+    }
+
+    .summary-row.total {
+      color: white;
+      font-size: 21px;
+      font-weight: bold;
+      padding-top: 15px;
+    }
+
+    .summary-row.deposit {
+      color: #ffd5df;
+      font-size: 19px;
+      font-weight: bold;
+    }
+
+    .summary-row.balance {
+      color: #d8aab6;
+      font-size: 17px;
+    }
+
+    .deposit-note {
+      text-align: center;
+      margin-top: 15px;
+      color: #cfa4ae;
+      font-size: 13px;
+    }
+
     .submit-button {
       width: 100%;
       margin-top: 22px;
@@ -260,6 +317,7 @@
       background: #3a101b;
       color: #f4cbd5;
       font-size: 14px;
+      text-align: center;
     }
 
     /* SOCIAL */
@@ -295,6 +353,10 @@
 
       .gallery-card img {
         height: 300px;
+      }
+
+      .summary-row {
+        font-size: 14px;
       }
     }
   </style>
@@ -333,16 +395,18 @@
 
       <div class="gallery-card">
         <img
-          src="./e92baa2e481ef0e421121cf37a3cffb6.jpg"
-          alt="Niss Bloom handmade bouquet"
+          src="e92baa2e481ef0e421121cf37a3cffb6.jpg"
+          alt="Niss Bloom Custom Satin Roses"
+          onerror="this.style.display='none';"
         >
         <h3>Custom Satin Roses</h3>
       </div>
 
       <div class="gallery-card">
         <img
-          src="./IMG-20260903-WA0015.jpg"
-          alt="Niss Bloom handmade bouquet"
+          src="IMG-20260903-WA0015.jpg"
+          alt="Niss Bloom Custom Bouquet"
+          onerror="this.style.display='none';"
         >
         <h3>Custom Bouquet</h3>
       </div>
@@ -441,11 +505,11 @@
         <label for="size">Bouquet Size</label>
         <select id="size" name="size" required>
           <option value="">Select a size</option>
-          <option value="Mini - 7 roses - $15">Mini — 7 roses — $15</option>
-          <option value="Small - 12 roses - $25">Small — 12 roses — $25</option>
-          <option value="Medium - 18 roses - $30">Medium — 18 roses — $30</option>
-          <option value="Large - 24 roses - $35">Large — 24 roses — $35</option>
-          <option value="XL - 30 roses - $40">XL — 30 roses — $40</option>
+          <option value="Mini" data-price="15">Mini — 7 roses — $15</option>
+          <option value="Small" data-price="25">Small — 12 roses — $25</option>
+          <option value="Medium" data-price="30">Medium — 18 roses — $30</option>
+          <option value="Large" data-price="35">Large — 24 roses — $35</option>
+          <option value="XL" data-price="40">XL — 30 roses — $40</option>
         </select>
 
         <label for="roseColor">Rose Color</label>
@@ -477,11 +541,11 @@
 
         <label for="addon">Add-On</label>
         <select id="addon" name="addon">
-          <option value="None">None</option>
-          <option value="Hello Kitty +$3">Hello Kitty +$3</option>
-          <option value="Stitch +$3">Stitch +$3</option>
-          <option value="Snoopy +$3">Snoopy +$3</option>
-          <option value="Personalized Ribbon +$2">
+          <option value="None" data-price="0">None</option>
+          <option value="Hello Kitty" data-price="3">Hello Kitty +$3</option>
+          <option value="Stitch" data-price="3">Stitch +$3</option>
+          <option value="Snoopy" data-price="3">Snoopy +$3</option>
+          <option value="Personalized Ribbon" data-price="2">
             Personalized Ribbon +$2
           </option>
         </select>
@@ -508,12 +572,47 @@
           placeholder="Tell us anything else you want for your bouquet."
         ></textarea>
 
+        <!-- LIVE ORDER SUMMARY -->
+        <div class="order-summary">
+
+          <h3>Order Summary</h3>
+
+          <div class="summary-row">
+            <span>Bouquet</span>
+            <span id="bouquetPrice">$0.00</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Add-On</span>
+            <span id="addonPrice">$0.00</span>
+          </div>
+
+          <div class="summary-row total">
+            <span>Order Total</span>
+            <span id="orderTotal">$0.00</span>
+          </div>
+
+          <div class="summary-row deposit">
+            <span>50% Deposit Due</span>
+            <span id="depositPrice">$0.00</span>
+          </div>
+
+          <div class="summary-row balance">
+            <span>Remaining Balance</span>
+            <span id="remainingBalance">$0.00</span>
+          </div>
+
+          <p class="deposit-note">
+            A 50% deposit is required before your bouquet is started.
+          </p>
+
+        </div>
+
         <button type="submit" class="submit-button">
           Send Order
         </button>
 
         <div class="notice">
-          A 50% deposit is required before your bouquet is started.
           Cash App is accepted for payment.
         </div>
 
@@ -530,9 +629,11 @@
     </div>
 
     <div class="social">
+
       <a
         href="https://www.instagram.com/niss.bloom_/"
         target="_blank"
+        rel="noopener"
       >
         Instagram: @niss.bloom_
       </a>
@@ -540,9 +641,11 @@
       <a
         href="https://www.tiktok.com/@niss.bloom_"
         target="_blank"
+        rel="noopener"
       >
         TikTok: @niss.bloom_
       </a>
+
     </div>
   </section>
 
@@ -553,39 +656,197 @@
   </footer>
 
   <script>
+
+    /* ==========================================
+       PRICE CALCULATOR
+       ========================================== */
+
+    const sizeSelect = document.getElementById("size");
+    const addonSelect = document.getElementById("addon");
+
+    const bouquetPriceDisplay =
+      document.getElementById("bouquetPrice");
+
+    const addonPriceDisplay =
+      document.getElementById("addonPrice");
+
+    const orderTotalDisplay =
+      document.getElementById("orderTotal");
+
+    const depositPriceDisplay =
+      document.getElementById("depositPrice");
+
+    const remainingBalanceDisplay =
+      document.getElementById("remainingBalance");
+
+
+    function updateOrderTotal() {
+
+      const selectedSize =
+        sizeSelect.options[sizeSelect.selectedIndex];
+
+      const selectedAddon =
+        addonSelect.options[addonSelect.selectedIndex];
+
+      const bouquetPrice =
+        Number(selectedSize.dataset.price || 0);
+
+      const addonPrice =
+        Number(selectedAddon.dataset.price || 0);
+
+      const total =
+        bouquetPrice + addonPrice;
+
+      const deposit =
+        total * 0.50;
+
+      const remaining =
+        total - deposit;
+
+
+      bouquetPriceDisplay.textContent =
+        "$" + bouquetPrice.toFixed(2);
+
+      addonPriceDisplay.textContent =
+        "$" + addonPrice.toFixed(2);
+
+      orderTotalDisplay.textContent =
+        "$" + total.toFixed(2);
+
+      depositPriceDisplay.textContent =
+        "$" + deposit.toFixed(2);
+
+      remainingBalanceDisplay.textContent =
+        "$" + remaining.toFixed(2);
+    }
+
+
+    sizeSelect.addEventListener(
+      "change",
+      updateOrderTotal
+    );
+
+    addonSelect.addEventListener(
+      "change",
+      updateOrderTotal
+    );
+
+
+    updateOrderTotal();
+
+
+    /* ==========================================
+       SEND ORDER BY TEXT MESSAGE
+       ========================================== */
+
     document
       .getElementById("orderForm")
       .addEventListener("submit", function(event) {
 
         event.preventDefault();
 
-        const name = document.getElementById("name").value;
-        const phone = document.getElementById("phone").value;
-        const size = document.getElementById("size").value;
-        const roseColor = document.getElementById("roseColor").value;
-        const ribbonColor = document.getElementById("ribbonColor").value;
-        const wrapColor = document.getElementById("wrapColor").value;
-        const addon = document.getElementById("addon").value;
-        const delivery = document.getElementById("delivery").value;
-        const date = document.getElementById("date").value;
-        const requests = document.getElementById("requests").value;
+
+        const name =
+          document.getElementById("name").value;
+
+        const phone =
+          document.getElementById("phone").value;
+
+        const size =
+          document.getElementById("size");
+
+        const sizeName =
+          size.options[size.selectedIndex].text;
+
+        const roseColor =
+          document.getElementById("roseColor").value;
+
+        const ribbonColor =
+          document.getElementById("ribbonColor").value;
+
+        const wrapColor =
+          document.getElementById("wrapColor").value;
+
+        const addon =
+          document.getElementById("addon");
+
+        const addonName =
+          addon.options[addon.selectedIndex].text;
+
+        const delivery =
+          document.getElementById("delivery").value;
+
+        const date =
+          document.getElementById("date").value;
+
+        const requests =
+          document.getElementById("requests").value;
+
+
+        const selectedSize =
+          size.options[size.selectedIndex];
+
+        const selectedAddon =
+          addon.options[addon.selectedIndex];
+
+
+        const bouquetPrice =
+          Number(selectedSize.dataset.price || 0);
+
+        const addonPrice =
+          Number(selectedAddon.dataset.price || 0);
+
+        const total =
+          bouquetPrice + addonPrice;
+
+        const deposit =
+          total * 0.50;
+
+        const remaining =
+          total - deposit;
+
 
         const message =
-          "NISS BLOOM ORDER%0A%0A" +
-          "Name: " + encodeURIComponent(name) + "%0A" +
-          "Customer Phone: " + encodeURIComponent(phone) + "%0A" +
-          "Bouquet: " + encodeURIComponent(size) + "%0A" +
-          "Rose Color: " + encodeURIComponent(roseColor) + "%0A" +
-          "Ribbon Color: " + encodeURIComponent(ribbonColor) + "%0A" +
-          "Wrap Color: " + encodeURIComponent(wrapColor) + "%0A" +
-          "Add-On: " + encodeURIComponent(addon) + "%0A" +
-          "Pickup/Delivery: " + encodeURIComponent(delivery) + "%0A" +
-          "Date Needed: " + encodeURIComponent(date) + "%0A" +
-          "Special Requests: " + encodeURIComponent(requests);
+
+          "NISS BLOOM ORDER\n\n" +
+
+          "Name: " + name + "\n" +
+
+          "Customer Phone: " + phone + "\n\n" +
+
+          "Bouquet: " + sizeName + "\n" +
+
+          "Rose Color: " + roseColor + "\n" +
+
+          "Ribbon Color: " + ribbonColor + "\n" +
+
+          "Wrap Color: " + wrapColor + "\n" +
+
+          "Add-On: " + addonName + "\n" +
+
+          "Pickup/Delivery: " + delivery + "\n" +
+
+          "Date Needed: " + date + "\n\n" +
+
+          "ORDER TOTAL: $" +
+          total.toFixed(2) + "\n" +
+
+          "50% DEPOSIT DUE: $" +
+          deposit.toFixed(2) + "\n" +
+
+          "REMAINING BALANCE: $" +
+          remaining.toFixed(2) + "\n\n" +
+
+          "Special Requests: " +
+          (requests || "None");
+
 
         window.location.href =
-          "sms:4633363283?body=" + message;
+          "sms:4633363283?body=" +
+          encodeURIComponent(message);
+
       });
+
   </script>
 
 </body>
