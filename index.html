@@ -1006,7 +1006,7 @@
           </div>
 
           <div class="price">
-            $15
+            $20
           </div>
 
         </a>
@@ -1053,11 +1053,11 @@
 
           <div>
             <h3>Large</h3>
-            <p>24 roses</p>
+            <p>23 roses</p>
           </div>
 
           <div class="price">
-            $35
+            $40
           </div>
 
         </a>
@@ -1074,7 +1074,7 @@
           </div>
 
           <div class="price">
-            $40
+            $150
           </div>
 
         </a>
@@ -1099,7 +1099,7 @@
           <li>Choose ribbon color</li>
           <li>Choose wrapping color</li>
           <li>Add butterflies</li>
-          <li>Add a crown for +$2</li>
+          <li>Add a crown for +$5</li>
           <li>Pickup or delivery</li>
 
         </ul>
@@ -1181,8 +1181,8 @@
                   Select a size
                 </option>
 
-                <option value="Mini" data-price="15">
-                  Mini — 7 roses — $15
+                <option value="Mini" data-price="20">
+                  Mini — 7 roses — $20
                 </option>
 
                 <option value="Small" data-price="25">
@@ -1193,12 +1193,12 @@
                   Medium — 18 roses — $30
                 </option>
 
-                <option value="Large" data-price="35">
-                  Large — 24 roses — $35
+                <option value="Large" data-price="40">
+                  Large — 23 roses — $40
                 </option>
 
-                <option value="XL" data-price="40">
-                  XL — 30 roses — $40
+                <option value="XL" data-price="150">
+                  XL — 30 roses — $150
                 </option>
 
               </select>
@@ -1309,7 +1309,7 @@
                     name="crown"
                   >
 
-                  Add Crown — +$2
+                  Add Crown — +$5
 
                 </label>
 
@@ -1569,7 +1569,7 @@
 
       const crown =
         crownCheckbox.checked
-          ? 2
+          ? 5
           : 0;
 
       const total =
@@ -1757,7 +1757,7 @@
           ) {
 
             extras.push(
-              'Crown — +$2'
+              'Crown — +$5'
             );
 
           }
