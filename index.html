@@ -316,6 +316,77 @@
       color: #000;
     }
 
+    /* NEW DROP — LUXURY COLLECTION */
+    .luxury-drop {
+      max-width: 1120px;
+      margin: 75px auto 0;
+      padding: 0 22px;
+    }
+
+    .luxury-box {
+      border: 1px solid var(--pink);
+      background: linear-gradient(135deg, #160b0e, #050505);
+      padding: 45px 30px;
+      text-align: center;
+    }
+
+    .luxury-label {
+      color: var(--pink);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 10px;
+      margin-bottom: 12px;
+    }
+
+    .luxury-box h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--pink-light);
+      font-size: clamp(35px, 6vw, 58px);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      line-height: 1;
+    }
+
+    .luxury-script {
+      color: var(--pink);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 25px;
+      margin: 12px 0 20px;
+    }
+
+    .luxury-description {
+      color: #d6c2c8;
+      font-size: 12px;
+      max-width: 600px;
+      margin: 0 auto 25px;
+    }
+
+    .luxury-details {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .luxury-details span {
+      border: 1px solid #70404e;
+      color: #fff;
+      padding: 10px 15px;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .luxury-note {
+      color: var(--pink-light);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19px;
+      font-style: italic;
+      margin-bottom: 22px;
+    }
+
     .section {
       max-width: 1120px;
       margin: auto;
@@ -919,6 +990,52 @@
 
   </section>
 
+  <!-- NEW DROP: LUXURY COLLECTION -->
+  <section class="luxury-drop" id="luxury">
+
+    <div class="luxury-box">
+
+      <div class="luxury-label">
+        Niss Bloom presents • New Drop
+      </div>
+
+      <h2>
+        The Luxury<br>Collection
+      </h2>
+
+      <div class="luxury-script">
+        A little extra elegance in every bloom
+      </div>
+
+      <p class="luxury-description">
+        Introducing our luxury handmade bouquets,
+        designed with extra details and beautiful
+        statement accessories. Make your bouquet
+        personal with your choice of colors and charms.
+      </p>
+
+      <div class="luxury-details">
+        <span>Rhinestone Brooches</span>
+        <span>Pearl Details</span>
+        <span>Crystal Flowers</span>
+        <span>Decorative Chains</span>
+        <span>Crowns</span>
+        <span>Butterflies</span>
+        <span>Custom Charms</span>
+      </div>
+
+      <div class="luxury-note">
+        More than a bouquet — a statement piece.
+      </div>
+
+      <a href="#order" class="pink-button">
+        Request a Luxury Bouquet
+      </a>
+
+    </div>
+
+  </section>
+
   <section class="section" id="gallery">
 
     <div class="section-heading">
@@ -994,89 +1111,44 @@
 
       <div class="price-grid">
 
-        <a
-          class="price-card"
-          href="#order"
-          data-size="Mini"
-        >
-
+        <a class="price-card" href="#order" data-size="Mini">
           <div>
             <h3>Mini</h3>
             <p>7 roses</p>
           </div>
-
-          <div class="price">
-            $20
-          </div>
-
+          <div class="price">$20</div>
         </a>
 
-        <a
-          class="price-card"
-          href="#order"
-          data-size="Small"
-        >
-
+        <a class="price-card" href="#order" data-size="Small">
           <div>
             <h3>Small</h3>
             <p>12 roses</p>
           </div>
-
-          <div class="price">
-            $25
-          </div>
-
+          <div class="price">$25</div>
         </a>
 
-        <a
-          class="price-card"
-          href="#order"
-          data-size="Medium"
-        >
-
+        <a class="price-card" href="#order" data-size="Medium">
           <div>
             <h3>Medium</h3>
             <p>18 roses</p>
           </div>
-
-          <div class="price">
-            $30
-          </div>
-
+          <div class="price">$30</div>
         </a>
 
-        <a
-          class="price-card"
-          href="#order"
-          data-size="Large"
-        >
-
+        <a class="price-card" href="#order" data-size="Large">
           <div>
             <h3>Large</h3>
             <p>23 roses</p>
           </div>
-
-          <div class="price">
-            $40
-          </div>
-
+          <div class="price">$40</div>
         </a>
 
-        <a
-          class="price-card"
-          href="#order"
-          data-size="XL"
-        >
-
+        <a class="price-card" href="#order" data-size="XL">
           <div>
             <h3>XL</h3>
             <p>30 roses</p>
           </div>
-
-          <div class="price">
-            $60
-          </div>
-
+          <div class="price">$60</div>
         </a>
 
       </div>
@@ -1094,14 +1166,12 @@
         </p>
 
         <ul>
-
           <li>Choose rose color</li>
           <li>Choose ribbon color</li>
           <li>Choose wrapping color</li>
           <li>Add butterflies</li>
           <li>Add a crown for +$5</li>
           <li>Pickup or delivery</li>
-
         </ul>
 
       </aside>
@@ -1110,10 +1180,7 @@
 
   </section>
 
-  <section
-    class="section order-section"
-    id="order"
-  >
+  <section class="section order-section" id="order">
 
     <div class="section-heading">
 
@@ -1134,248 +1201,93 @@
           <div class="form-grid">
 
             <div class="field">
-
-              <label for="name">
-                Your Name
-              </label>
-
-              <input
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Your name"
-                required
-              >
-
+              <label for="name">Your Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required>
             </div>
 
             <div class="field">
-
-              <label for="phone">
-                Your Phone
-              </label>
-
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
-                placeholder="Your phone number"
-                required
-              >
-
+              <label for="phone">Your Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="Your phone number" required>
             </div>
 
             <div class="field full">
-
-              <label for="size">
-                Bouquet Size
-              </label>
-
-              <select
-                id="size"
-                name="size"
-                required
-              >
-
-                <option value="">
-                  Select a size
-                </option>
-
-                <option value="Mini" data-price="20">
-                  Mini — 7 roses — $20
-                </option>
-
-                <option value="Small" data-price="25">
-                  Small — 12 roses — $25
-                </option>
-
-                <option value="Medium" data-price="30">
-                  Medium — 18 roses — $30
-                </option>
-
-                <option value="Large" data-price="40">
-                  Large — 23 roses — $40
-                </option>
-
-                <option value="XL" data-price="60">
-                  XL — 30 roses — $60
-                </option>
-
+              <label for="size">Bouquet Size</label>
+              <select id="size" name="size" required>
+                <option value="">Select a size</option>
+                <option value="Mini" data-price="20">Mini — 7 roses — $20</option>
+                <option value="Small" data-price="25">Small — 12 roses — $25</option>
+                <option value="Medium" data-price="30">Medium — 18 roses — $30</option>
+                <option value="Large" data-price="40">Large — 23 roses — $40</option>
+                <option value="XL" data-price="60">XL — 30 roses — $60</option>
               </select>
-
             </div>
 
             <div class="field">
-
-              <label for="roseColor">
-                Rose Color
-              </label>
-
-              <input
-                id="roseColor"
-                name="roseColor"
-                type="text"
-                placeholder="Pink, white, red..."
-                required
-              >
-
+              <label for="roseColor">Rose Color</label>
+              <input id="roseColor" name="roseColor" type="text" placeholder="Pink, white, red..." required>
             </div>
 
             <div class="field">
-
-              <label for="ribbonColor">
-                Ribbon Color
-              </label>
-
-              <input
-                id="ribbonColor"
-                name="ribbonColor"
-                type="text"
-                placeholder="Pink, white, black..."
-                required
-              >
-
+              <label for="ribbonColor">Ribbon Color</label>
+              <input id="ribbonColor" name="ribbonColor" type="text" placeholder="Pink, white, black..." required>
             </div>
 
             <div class="field">
-
-              <label for="wrapColor">
-                Wrapping Color
-              </label>
-
-              <input
-                id="wrapColor"
-                name="wrapColor"
-                type="text"
-                placeholder="Pink, white, black..."
-                required
-              >
-
+              <label for="wrapColor">Wrapping Color</label>
+              <input id="wrapColor" name="wrapColor" type="text" placeholder="Pink, white, black..." required>
             </div>
 
             <div class="field">
-
-              <label for="delivery">
-                Pickup or Delivery
-              </label>
-
-              <select
-                id="delivery"
-                name="delivery"
-                required
-              >
-
-                <option value="">
-                  Select one
-                </option>
-
-                <option value="Pickup">
-                  Pickup
-                </option>
-
-                <option value="Delivery">
-                  Delivery
-                </option>
-
+              <label for="delivery">Pickup or Delivery</label>
+              <select id="delivery" name="delivery" required>
+                <option value="">Select one</option>
+                <option value="Pickup">Pickup</option>
+                <option value="Delivery">Delivery</option>
               </select>
-
             </div>
 
             <div class="field full">
-
-              <label>
-                Extras
-              </label>
-
+              <label>Extras</label>
               <div class="checkboxes">
 
                 <label class="check-option">
-
-                  <input
-                    type="checkbox"
-                    id="butterfly"
-                    name="butterfly"
-                  >
-
+                  <input type="checkbox" id="butterfly" name="butterfly">
                   Add Butterflies — Included
-
                 </label>
 
                 <label class="check-option">
-
-                  <input
-                    type="checkbox"
-                    id="crown"
-                    name="crown"
-                  >
-
+                  <input type="checkbox" id="crown" name="crown">
                   Add Crown — +$5
-
                 </label>
 
               </div>
-
             </div>
 
             <div class="field">
-
-              <label for="date">
-                Date Needed
-              </label>
-
-              <input
-                id="date"
-                name="date"
-                type="date"
-                required
-              >
-
+              <label for="date">Date Needed</label>
+              <input id="date" name="date" type="date" required>
             </div>
 
             <div class="field">
-
-              <label for="location">
-                Pickup / Delivery Details
-              </label>
-
-              <input
-                id="location"
-                name="location"
-                type="text"
-                placeholder="Area or pickup details"
-              >
-
+              <label for="location">Pickup / Delivery Details</label>
+              <input id="location" name="location" type="text" placeholder="Area or pickup details">
             </div>
 
             <div class="field full">
-
-              <label for="requests">
-                Special Requests
-              </label>
-
-              <textarea
-                id="requests"
-                name="requests"
-                placeholder="Tell Niss Bloom anything else you'd like..."
-              ></textarea>
-
+              <label for="requests">Special Requests</label>
+              <textarea id="requests" name="requests" placeholder="Tell Niss Bloom anything else you'd like..."></textarea>
             </div>
 
           </div>
 
-          <button
-            class="submit"
-            type="submit"
-          >
+          <button class="submit" type="submit">
             Send Order to Niss Bloom
           </button>
 
           <div class="info-strip">
-
             Your order details will open in a text
             message addressed to Niss Bloom at
             463-336-3283.
-
           </div>
 
         </form>
@@ -1384,89 +1296,43 @@
 
       <aside class="summary-box">
 
-        <h3>
-          Order Summary
-        </h3>
+        <h3>Order Summary</h3>
 
         <div class="summary-row">
-
-          <span>
-            Bouquet
-          </span>
-
-          <strong id="bouquetPrice">
-            $0.00
-          </strong>
-
+          <span>Bouquet</span>
+          <strong id="bouquetPrice">$0.00</strong>
         </div>
 
         <div class="summary-row">
-
-          <span>
-            Crown
-          </span>
-
-          <strong id="crownPrice">
-            $0.00
-          </strong>
-
+          <span>Crown</span>
+          <strong id="crownPrice">$0.00</strong>
         </div>
 
         <div class="summary-row">
-
-          <span>
-            Butterflies
-          </span>
-
-          <strong id="butterflyPrice">
-            Not added
-          </strong>
-
+          <span>Butterflies</span>
+          <strong id="butterflyPrice">Not added</strong>
         </div>
 
         <div class="summary-row total">
-
-          <span>
-            Total
-          </span>
-
-          <strong id="orderTotal">
-            $0.00
-          </strong>
-
+          <span>Total</span>
+          <strong id="orderTotal">$0.00</strong>
         </div>
 
         <div class="summary-row deposit">
-
-          <span>
-            50% Deposit
-          </span>
-
-          <strong id="depositPrice">
-            $0.00
-          </strong>
-
+          <span>50% Deposit</span>
+          <strong id="depositPrice">$0.00</strong>
         </div>
 
         <div class="summary-row">
-
-          <span>
-            Remaining
-          </span>
-
-          <strong id="remainingBalance">
-            $0.00
-          </strong>
-
+          <span>Remaining</span>
+          <strong id="remainingBalance">$0.00</strong>
         </div>
 
         <p class="summary-note">
-
           A 50% deposit is shown as a planning
           amount. Confirm payment and
           delivery/pickup details directly with
           Niss Bloom.
-
         </p>
 
       </aside>
@@ -1475,10 +1341,7 @@
 
   </section>
 
-  <section
-    class="section social-section"
-    id="socials"
-  >
+  <section class="section social-section" id="socials">
 
     <div class="section-heading">
 
@@ -1742,92 +1605,41 @@
 
           const extras = [];
 
-          if (
-            butterflyCheckbox.checked
-          ) {
-
-            extras.push(
-              'Butterflies — Included'
-            );
-
+          if (butterflyCheckbox.checked) {
+            extras.push('Butterflies — Included');
           }
 
-          if (
-            crownCheckbox.checked
-          ) {
-
-            extras.push(
-              'Crown — +$5'
-            );
-
+          if (crownCheckbox.checked) {
+            extras.push('Crown — +$5');
           }
 
-          if (
-            extras.length === 0
-          ) {
-
-            extras.push(
-              'None'
-            );
-
+          if (extras.length === 0) {
+            extras.push('None');
           }
 
           const message = [
 
             'NISS BLOOM ORDER',
-
             '',
-
             'Name: ' + name,
-
             'Customer Phone: ' + phone,
-
             '',
-
             'Bouquet: ' + sizeText,
-
             'Rose Color: ' + roseColor,
-
             'Ribbon Color: ' + ribbonColor,
-
             'Wrapping Color: ' + wrapColor,
-
-            'Extras: ' +
-              extras.join(', '),
-
-            'Pickup/Delivery: ' +
-              delivery,
-
-            'Details: ' +
-              (
-                location ||
-                'Not provided'
-              ),
-
-            'Date Needed: ' +
-              date,
-
+            'Extras: ' + extras.join(', '),
+            'Pickup/Delivery: ' + delivery,
+            'Details: ' + (location || 'Not provided'),
+            'Date Needed: ' + date,
             '',
-
-            'BOUQUET: ' +
-              money(prices.bouquet),
-
-            'CROWN: ' +
-              money(prices.crown),
-
-            'ORDER TOTAL: ' +
-              money(prices.total),
-
-            '50% DEPOSIT: ' +
-              money(prices.deposit),
-
-            'REMAINING BALANCE: ' +
-              money(prices.remaining),
-
+            'BOUQUET: ' + money(prices.bouquet),
+            'CROWN: ' + money(prices.crown),
+            'ORDER TOTAL: ' + money(prices.total),
+            '50% DEPOSIT: ' + money(prices.deposit),
+            'REMAINING BALANCE: ' + money(prices.remaining),
             '',
-
-            'Special Requests: ' +
-              requests
+            'Special Requests: ' + requests
 
           ].join('\n');
 
